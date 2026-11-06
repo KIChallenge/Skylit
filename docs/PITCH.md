@@ -45,6 +45,68 @@ Vorbereitung: `POST /api/dev/reset` für Maria. Browser auf `http://localhost:30
 1. Abmelden, Persona **Elif Yılmaz** wählen.
 2. Eingabe: „Which check-ups does my 2-year-old need?“ Der Lotse antwortet auf Englisch mit Eltern-Kind-Pass und Kinderimpfprogramm.
 
+### Autopilot für die Präsentation
+
+Der Autopilot tippt die Texte dieses Skripts. Fabian sendet selbst mit Enter.
+Voraussetzung in `.env`: `LLM_PROVIDER=replay`, `LLM_REPLAY_FALLBACK=eustella`, `LLM_REPLAY_FIRST_TOKEN_MS=900`, `LLM_REPLAY_CHARS_PER_SECOND=110`, `NEXT_PUBLIC_DEMO_AUTOPILOT=1`. Danach `make run`.
+
+| Taste | Wirkung |
+|---|---|
+| Strg+Umschalt+1 | Golden Path S1–S3 (Maria) |
+| Strg+Umschalt+2 | Show-Fall K Kopfschmerz (Stefan) |
+| Strg+Umschalt+3 | Show-Fall P Pflegegeld (Maria) |
+| Strg+Umschalt+4 | Show-Fall V Vorsorge (Stefan) |
+| Strg+Umschalt+5 | S5 Englisch (Elif) |
+| Strg+Umschalt+Leertaste (oder Strg+Umschalt+→) | Nächster Schritt: tippt den nächsten Text oder klickt die SAMPLER-Option |
+| Enter während des Tippens | Text sofort fertig, noch nicht gesendet |
+| Esc während des Tippens | Text verwerfen |
+
+- Ohne Auswahl gilt je Persona: Maria → P, Stefan → K, Elif → S5.
+- Der nächste Schritt ist der erste Skripttext, der in diesem Gespräch noch fehlt. Ein Neuladen schadet nicht.
+- Bei einer SAMPLER-Karte klickt der Autopilot die aufgezeichnete Option und setzt den Fokus auf „Antworten“. Fabian drückt Enter.
+- Beim Brief-Schritt hängt Fabian `entlassungsbefund.pdf` selbst an, bevor er sendet.
+- Im Standort-Dialog immer „Nicht jetzt“ wählen. Ein geteilter Standort ändert die Tool-Ergebnisse und damit die Aufnahme.
+- Freie Fragen der Jury tippt Fabian normal. Ohne Aufnahme antwortet das Live-Modell eustella.
+- Nach einer freien Frage passt das Gespräch nicht mehr zur Aufnahme. Weitere Skripttexte gehen dann ebenfalls live. Für Replay ein neues Gespräch starten.
+- Antworten aus der Aufnahme starten nach knapp einer Sekunde und streamen Wort für Wort.
+
+### Show-Fälle (vorab aufgezeichnet)
+
+Drei weitere Fälle zeigen möglichst viele Funktionen. Sie laufen mit `LLM_PROVIDER=replay` offline.
+Warnung: Replay trifft nur bei exakt gleicher Eingabe. Tippen oder kopieren Sie jeden Text wörtlich. Klicken Sie im Standort-Dialog auf „Nicht jetzt“.
+Vor jedem Fall: Persona wählen, `POST /api/dev/reset`, neues Gespräch.
+Prüfung: `cd backend && uv run python -m scripts.record_demo --base-url http://localhost:8000 --case all --check`.
+
+**K — Kopfschmerz (Stefan Gruber): SAMPLER-Aufnahme, Hausärzte aus offenen Daten, E-Mail-Entwurf**
+1. „Ich habe seit drei Tagen Kopfschmerzen und weiß nicht, wohin ich damit gehen soll.“
+2. Der Lotse stellt jede Frage als Karte. Der Autopilot klickt diese Optionen; ohne Autopilot genau diese klicken und „Antworten“:
+   - Art: „drückend“
+   - Auslöser und Linderung: „Ruhe oder Liegen“
+   - Ort und Ausstrahlung: „hinter der Stirn oder den Augen“
+   - Stärke: „4–6 (mittel)“
+   - Zeitverlauf: „kommt und geht“
+   - Allergien: „keine bekannt“
+   - Medikamente: „keine Dauermedikamente“
+   - Vorgeschichte: „nichts Passendes“
+   - Risikofaktoren: „keine dieser Symptome“
+3. Der Lotse fasst zusammen, stellt keine Diagnose und nennt 1450 als Anlaufstelle. Sprechtext: „Kein Notfall, kein Banner. Der Lotse sammelt, er bewertet nicht.“
+4. „Welche Hausärztinnen oder Hausärzte gibt es in 1100?“ Die Liste zeigt echte Ordinationen aus offenen Daten der Stadt Wien und eine Demo-Ordination.
+5. „Ja, bitte entwirf die E-Mail mit meinen Angaben an die Demo-Ordination Dr. Emil Kieselstern.“ Die E-Mail-Card gibt nur Stefans Angaben wieder.
+
+**P — Pflegegeld (Maria Berger): Brief, Antrag, Stellen, Termin, Pflegekarenz, E-Mail**
+1. Entlassungsbrief anhängen und senden: „Meine Mutter Anna ist gestern aus dem Spital entlassen worden. Sie wohnt allein in 1030 Wien. Hier ist der Entlassungsbrief. Welche Unterstützung bekommt sie?“ „Mein Fall“ füllt sich mit sechs Schritten.
+2. „Bitte füll den Pflegegeldantrag für meine Mutter aus.“
+3. „Wo reiche ich den Antrag ein, und wer hilft uns bei der Pflege zu Hause?“ Office-Cards: PVA und FSW.
+4. „Bitte schlag mir einen Termin bei einer Pflegeberatung in 1030 vor.“ Termin-Card mit Kalender und `.ics`.
+5. „Ich arbeite Vollzeit. Kann ich für die Pflege meiner Mutter in Pflegekarenz gehen? Bitte entwirf auch eine E-Mail an meinen Arbeitgeber an personal@arbeitgeber.example.“ Der Lotse nennt die Voraussetzung Pflegegeld ab Stufe 3 und fragt vor dem Entwurf nach.
+6. „Ja, bitte erstelle den E-Mail-Entwurf.“
+
+**V — Vorsorge (Stefan Gruber): Vorsorgeuntersuchung und SVS-Angebote**
+1. „Ich bin selbstständig und möchte etwas für meine Gesundheit tun. Was bietet mir meine Versicherung an?“ Der Lotse nennt „Selbständig Gesund“ und den Gesundheitshunderter, mit Quelle svs.at. Kein SAMPLER: Vorsorge ist keine Beschwerde.
+2. „Ich möchte mich mehr bewegen und weniger Stress haben. Meine letzte Vorsorgeuntersuchung ist über drei Jahre her.“
+3. „Wo kann ich die Vorsorgeuntersuchung in 1100 machen? Bitte schlag mir einen Termin bei der Demo-Ordination vor.“
+4. „Bitte leg mir die nächsten Schritte in Mein Fall an.“
+
 ## 4. So funktioniert es (2 min)
 
 Vier Kästen: Next.js-Oberfläche → FastAPI-Backend mit Agent und Tools → LLM `eustella-v1.5` (EU, Wien) → Postgres mit pgvector.

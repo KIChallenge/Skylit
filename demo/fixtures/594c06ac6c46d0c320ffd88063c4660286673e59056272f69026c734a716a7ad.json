@@ -1,0 +1,158 @@
+{
+  "request_sha256": "594c06ac6c46d0c320ffd88063c4660286673e59056272f69026c734a716a7ad",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": "chatcmpl-tool-9ed3b0a03eb8cb00",
+        "name": "prepare_form",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"form_id\": \"p"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "va_pflege"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "geld"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"values\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"applicant.last_name\": \"Berger\", \"applicant.first_name\": \"Anna\", \"applicant.date_of_birth\": \"14.03.1948\", \"applicant.sex\": \"weiblich\"}}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 14372,
+        "completion_tokens": 86,
+        "cached_tokens": 7936
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 14372,
+        "completion_tokens": 86,
+        "cached_tokens": 7936
+      },
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9ed3b0a03eb8cb00",
+          "name": "prepare_form",
+          "arguments": {
+            "form_id": "pva_pflegegeld",
+            "values": {
+              "applicant.last_name": "Berger",
+              "applicant.first_name": "Anna",
+              "applicant.date_of_birth": "14.03.1948",
+              "applicant.sex": "weiblich"
+            }
+          },
+          "raw_arguments": "{\"form_id\": \"pva_pflegegeld\", \"values\": {\"applicant.last_name\": \"Berger\", \"applicant.first_name\": \"Anna\", \"applicant.date_of_birth\": \"14.03.1948\", \"applicant.sex\": \"weiblich\"}}",
+          "parse_error": null
+        }
+      ],
+      "model": "eustella-v1.5",
+      "request_id": "req_4ddfc2c14b329c7897223e06",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "15186",
+        "x-ratelimit-remaining-requests": "18",
+        "x-ratelimit-remaining-tokens": "74726",
+        "x-ratelimit-reset-output-tokens": "1s",
+        "x-ratelimit-reset-requests": "3s",
+        "x-ratelimit-reset-tokens": "13s"
+      }
+    }
+  ]
+}

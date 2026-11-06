@@ -382,7 +382,10 @@ def _build_client(provider: str, record: bool) -> LLMClient:
     if provider in ("fake", "replay"):
         if record:
             logger.warning("LLM_RECORD needs a live provider, not %s", provider)
-        return FakeClient() if provider == "fake" else ReplayClient()
+        if provider == "fake":
+            return FakeClient()
+        fallback = settings.llm_replay_fallback
+        return ReplayClient(None if fallback == "fake" else _build_live(fallback))
     live = _build_live(provider)
     return RecordingClient(live) if record else live
 

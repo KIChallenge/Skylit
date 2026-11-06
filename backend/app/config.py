@@ -25,6 +25,12 @@ class Settings(BaseSettings):
     llm_provider: Literal["eustella", "azure", "fake", "replay"] = "fake"
     llm_record: bool = False
     llm_fixtures_dir: str = "demo/fixtures"
+    # Replay pacing makes recorded answers stream like live ones. 0 turns it off.
+    llm_replay_first_token_ms: int = Field(default=0, ge=0)
+    llm_replay_chars_per_second: float = Field(default=0, ge=0)
+    llm_replay_max_seconds: float = Field(default=12, gt=0)
+    # Where a replay miss goes: the scripted fake model or a live provider.
+    llm_replay_fallback: Literal["fake", "eustella", "azure"] = "fake"
     eustella_api_key: str = ""
     eustella_base_url: str = "https://api.eustella.com/v1"
     eustella_model: str = "eustella-v1.5"

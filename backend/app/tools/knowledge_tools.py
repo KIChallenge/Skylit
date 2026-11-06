@@ -40,6 +40,11 @@ async def search_knowledge(
         bundesland=bundesland,
         top_k=input.top_k,
     )
+    if not chunks and input.category:
+        # The model often passes a Leistung id as category. Search all categories.
+        chunks = await retriever.search(
+            ctx.db, input.query, bundesland=bundesland, top_k=input.top_k
+        )
     return ToolOutput(
         result={
             "chunks": [

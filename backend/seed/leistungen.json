@@ -268,5 +268,59 @@
       "e-card des Kindes"
     ],
     "source_url": "https://www.sozialministerium.gv.at/Themen/Gesundheit/Impfen/Kostenfreies-Kinderimpfprogramm.html"
+  },
+  {
+    "id": "vorsorgeuntersuchung",
+    "title": "Vorsorgeuntersuchung (Gesundenuntersuchung)",
+    "category": "vorsorge",
+    "short": "Kostenlose Gesundheitsuntersuchung einmal alle 12 Monate für Erwachsene.",
+    "conditions": [
+      "Ab 18 Jahren",
+      "Hauptwohnsitz in Österreich",
+      "1-mal alle 12 Monate kostenlos",
+      "Bei einer Ärztin oder einem Arzt mit Vertrag für die Vorsorgeuntersuchung, einem ÖGK-Gesundheitszentrum oder dem Gesundheitsvorsorgezentrum der Stadt Wien"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "e-card oder e-card-Ersatzbeleg",
+      "Nüchtern zur Blutabnahme kommen"
+    ],
+    "source_url": "https://www.wien.gv.at/gesundheit/beratung-vorsorge/gesundenuntersuchung/"
+  },
+  {
+    "id": "svs_selbstaendig_gesund",
+    "title": "SVS „Selbständig Gesund“ – halber Selbstbehalt",
+    "category": "vorsorge",
+    "short": "Wer vereinbarte Gesundheitsziele erreicht, zahlt auf Antrag 10 statt 20 Prozent Selbstbehalt.",
+    "conditions": [
+      "Bei der SVS versichert, zum Beispiel Gewerbetreibende und Neue Selbständige",
+      "Vorsorgeuntersuchung mit vereinbarten Zielen zu Blutdruck, Gewicht, Bewegung, Tabak und Alkohol",
+      "Evaluierungsgespräch frühestens nach sechs Monaten"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "e-card",
+      "Ergebnis des Evaluierungsgesprächs"
+    ],
+    "source_url": "https://www.svs.at/selbstaendiggesund"
+  },
+  {
+    "id": "svs_gesundheitshunderter",
+    "title": "SVS-Gesundheitshunderter",
+    "category": "vorsorge",
+    "short": "Zuschuss der SVS einmal pro Kalenderjahr für Bewegung, Ernährung, mentale Gesundheit, Entspannung und Rauchfrei.",
+    "conditions": [
+      "Bei der SVS krankenversichert oder mitversichert",
+      "Vorsorgeuntersuchung höchstens drei Jahre vor dem Antrag, ab 40 Jahren höchstens zwei Jahre (laut WKO, Stand 02.02.2023)",
+      "Freiwillige Leistung ohne Rechtsanspruch"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "Online-Formular, mit ID Austria oder per Post unterschrieben, mit allen Beilagen"
+    ],
+    "source_url": "https://www.svs.at/gesundheitshunderter"
   }
 ]

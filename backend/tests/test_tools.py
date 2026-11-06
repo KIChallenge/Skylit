@@ -155,10 +155,15 @@ async def test_search_knowledge_uses_retriever_and_preserves_sources(ctx, monkey
             },
         }
     ]
-    empty = await execute(
-        ctx, "search_knowledge", query="Pflegegeld beantragen", category="reha"
+    # An empty or unknown category falls back to all categories.
+    fallback = await execute(
+        ctx, "search_knowledge", query="Pflegegeld beantragen",
+        category="pflegekarenz", top_k=2,
     )
-    assert empty.ok and empty.result == {"chunks": []}
+    assert fallback.ok
+    assert {c["source"]["title"] for c in fallback.result["chunks"]} == {
+        "Pflegegeld (pflege)", "Pflegegeld (kosten)",
+    }
 
 
 async def test_get_leistung_returns_conditions_source_and_card(ctx):
@@ -431,6 +436,16 @@ def test_record_demo_check_rejects_fake_final_model():
             record_demo.check_replay_turn(
                 client, [{"type": "message.completed", "message_id": "synthetic"}], 2
             )
+
+
+@pytest.mark.parametrize("placeholder", ["", "None", "null"])
+async def test_draft_email_treats_placeholder_address_as_missing(ctx, placeholder):
+    result = await execute(
+        ctx, "draft_email", to_label="Ordination", to_email=placeholder,
+        subject="Termin", body="Sehr geehrte Damen und Herren",
+    )
+    assert result.ok
+    assert result.card.email.to_email is None
 
 
 async def test_draft_email_returns_a_draft_without_persistence(ctx):

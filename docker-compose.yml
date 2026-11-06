@@ -62,6 +62,7 @@ services:
         NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:${BACKEND_PORT:-8000}}
         NEXT_PUBLIC_API_TIMEOUT_MS: ${NEXT_PUBLIC_API_TIMEOUT_MS:-}
         NEXT_PUBLIC_STREAM_IDLE_TIMEOUT_MS: ${NEXT_PUBLIC_STREAM_IDLE_TIMEOUT_MS:-}
+        NEXT_PUBLIC_DEMO_AUTOPILOT: ${NEXT_PUBLIC_DEMO_AUTOPILOT:-}
     depends_on:
       backend:
         condition: service_healthy

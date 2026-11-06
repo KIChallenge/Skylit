@@ -15,6 +15,7 @@ from openai.types.chat import ChatCompletionChunk
 
 from app.config import settings
 from app.llm import client as client_module
+from app.llm import replay as replay_module
 from app.llm.client import AzureClient, EustellaClient, get_llm_client
 from app.llm.fake import FakeClient
 from app.llm.replay import RecordingClient, ReplayClient, request_key
@@ -150,6 +151,10 @@ def llm_settings(monkeypatch, tmp_path):
     monkeypatch.setattr(settings, "eustella_model", "eustella-test")
     monkeypatch.setattr(settings, "azure_openai_model", "azure-test")
     monkeypatch.setattr(settings, "azure_reasoning_effort", "low")
+    monkeypatch.setattr(settings, "llm_replay_first_token_ms", 0)
+    monkeypatch.setattr(settings, "llm_replay_chars_per_second", 0)
+    monkeypatch.setattr(settings, "llm_replay_max_seconds", 12)
+    monkeypatch.setattr(settings, "llm_replay_fallback", "fake")
     client_module._build_client.cache_clear()
     yield
     client_module._build_client.cache_clear()
@@ -938,7 +943,20 @@ async def test_fixture_reads_and_writes_run_outside_the_event_loop(monkeypatch):
     replayed = await ReplayClient().complete(MESSAGES)
 
     assert replayed == recorded
-    assert operations == ["write", "read"]
+    # Recording first looks for an existing fixture, then writes on the miss.
+    assert operations == ["read", "write", "read"]
+
+
+async def test_recording_reuses_an_existing_fixture_without_a_live_call():
+    first, first_calls = eustella(text_stream("Aufgezeichnet"))
+    await drain(RecordingClient(first).stream_chat(MESSAGES))
+    second, second_calls = eustella(text_stream("Neu"))
+
+    again = await drain(RecordingClient(second).stream_chat(MESSAGES))
+
+    assert "".join(c.text or "" for c in again) == "Aufgezeichnet"
+    assert len(first_calls.calls) == 1
+    assert second_calls.calls == []
 
 
 async def test_replay_finds_fixtures_recorded_on_azure():
@@ -967,6 +985,61 @@ async def test_replay_miss_falls_back_to_fake_and_logs_key(caplog):
 
     assert result.model == "fake"
     assert expected_key in caplog.text
+
+
+async def test_replay_miss_goes_to_the_given_fallback():
+    class Live(FakeClient):
+        def __init__(self) -> None:
+            self.model = "live-test"
+
+        async def stream_chat(self, messages, **kwargs):
+            yield LLMChunk(type="text", text="live")
+            yield LLMChunk(type="finish", finish_reason="stop", model=self.model)
+
+    result = await ReplayClient(Live()).complete(MESSAGES)
+
+    assert result.model == "live-test"
+
+
+def test_replay_fallback_setting_builds_a_live_client(monkeypatch):
+    sdk = lambda **_: SimpleNamespace()  # noqa: E731
+    monkeypatch.setattr(client_module.openai, "AsyncOpenAI", sdk)
+    monkeypatch.setattr(settings, "llm_record", False)
+    monkeypatch.setattr(settings, "llm_provider", "replay")
+    monkeypatch.setattr(settings, "llm_replay_fallback", "eustella")
+
+    client = get_llm_client()
+
+    assert isinstance(client, ReplayClient)
+    assert isinstance(client.fallback, EustellaClient)
+
+
+async def test_replay_pacing_delays_first_token_and_text(tmp_path, monkeypatch):
+    recorded = [
+        LLMChunk(type="text", text="a" * 10),
+        LLMChunk(type="text", text="b" * 20),
+        LLMChunk(type="finish", finish_reason="stop", model="eustella-test"),
+    ]
+    key = request_key("eustella-test", MESSAGES)
+    fixture = {"request_sha256": key, "model": "eustella-test",
+               "chunks": [c.model_dump(mode="json") for c in recorded]}
+    (tmp_path / f"{key}.json").write_text(json.dumps(fixture), encoding="utf-8")
+    monkeypatch.setattr(settings, "llm_replay_first_token_ms", 1000)
+    monkeypatch.setattr(settings, "llm_replay_chars_per_second", 10)
+    monkeypatch.setattr(settings, "llm_replay_max_seconds", 2.5)
+    monkeypatch.setattr(replay_module.random, "uniform", lambda a, b: 1.0)
+    sleeps: list[float] = []
+
+    async def fake_sleep(seconds: float) -> None:
+        sleeps.append(seconds)
+
+    monkeypatch.setattr(replay_module.asyncio, "sleep", fake_sleep)
+
+    replayed = await drain(ReplayClient().stream_chat(MESSAGES))
+
+    assert replayed == recorded
+    # First token 1 s; 10 chars = 1 s; then the 2.5 s budget leaves 1.5 s.
+    assert sleeps == [1.0, 1.0, 1.5]
 
 
 async def test_corrupt_fixture_falls_back_to_fake(tmp_path):

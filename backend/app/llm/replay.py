@@ -4,6 +4,7 @@ import asyncio
 import json
 import logging
 import os
+import random
 import re
 from collections.abc import AsyncIterator
 from contextlib import aclosing
@@ -187,12 +188,42 @@ def _save_chunks(key: str, model: str, chunks: list[LLMChunk]) -> None:
         logger.warning("LLM record failed: key=%s error=%s", key, exc)
 
 
-class ReplayClient(BaseLLMClient):
-    """Serve recorded responses. A miss falls back to `fake` and logs the key."""
+TOOL_CALL_DELAY_SECONDS = 0.02
+FIRST_TOKEN_JITTER = 0.3
 
-    def __init__(self) -> None:
+
+async def _paced(chunks: list[LLMChunk]) -> AsyncIterator[LLMChunk]:
+    """Stream recorded chunks at a live-like pace. Without settings, no delay."""
+    first = settings.llm_replay_first_token_ms / 1000
+    speed = settings.llm_replay_chars_per_second
+    if first:
+        jitter = random.uniform(1 - FIRST_TOKEN_JITTER, 1 + FIRST_TOKEN_JITTER)
+        await asyncio.sleep(first * jitter)
+    budget = settings.llm_replay_max_seconds
+    for chunk in chunks:
+        delay = 0.0
+        if speed and chunk.type == "text" and chunk.text:
+            delay = len(chunk.text) / speed
+        elif speed and chunk.type == "tool_call":
+            delay = TOOL_CALL_DELAY_SECONDS
+        # A long answer must not stall the demo: the budget caps the whole stream.
+        delay = min(delay, budget)
+        if delay:
+            budget -= delay
+            await asyncio.sleep(delay)
+        yield chunk
+
+
+class ReplayClient(BaseLLMClient):
+    """Serve recorded responses. A miss goes to `fallback` and logs the key.
+
+    The fallback is the fake model, or a live provider (LLM_REPLAY_FALLBACK), so a
+    question nobody recorded still gets a real answer.
+    """
+
+    def __init__(self, fallback: LLMClient | None = None) -> None:
         self.model = settings.eustella_model
-        self.fallback = FakeClient()
+        self.fallback = fallback or FakeClient()
 
     async def stream_chat(
         self,
@@ -213,11 +244,17 @@ class ReplayClient(BaseLLMClient):
             chunks = await asyncio.to_thread(_load_chunks, key)
             if chunks is not None:
                 uuids = _request_uuids(messages, tools, response_format, tool_choice)
-                for chunk in _map_chunks(chunks, uuids, record=False):
-                    yield chunk
+                mapped = _map_chunks(chunks, uuids, record=False)
+                async with aclosing(_paced(mapped)) as paced:
+                    async for chunk in paced:
+                        yield chunk
                 return
 
-        logger.warning("LLM replay miss, falling back to fake: key=%s", keys[0])
+        logger.warning(
+            "LLM replay miss, falling back to %s: key=%s",
+            getattr(self.fallback, "model", "fallback"),
+            keys[0],
+        )
         async with aclosing(
             self.fallback.stream_chat(
                 messages,
@@ -233,7 +270,11 @@ class ReplayClient(BaseLLMClient):
 
 
 class RecordingClient(BaseLLMClient):
-    """Wrap a live client and write each complete response as `<key>.json`."""
+    """Wrap a live client and write each complete response as `<key>.json`.
+
+    An existing fixture wins over a live call, so recording new demo cases never
+    changes the recorded golden path. Delete a fixture to record it again.
+    """
 
     def __init__(self, inner: LLMClient) -> None:
         self.inner = inner
@@ -248,6 +289,13 @@ class RecordingClient(BaseLLMClient):
         max_tokens: int | None = None,
         response_format: dict[str, Any] | None = None,
     ) -> AsyncIterator[LLMChunk]:
+        key = request_key(self.model, messages, tools, response_format, tool_choice)
+        uuids = _request_uuids(messages, tools, response_format, tool_choice)
+        recorded = await asyncio.to_thread(_load_chunks, key)
+        if recorded is not None:
+            for chunk in _map_chunks(recorded, uuids, record=False):
+                yield chunk
+            return
         chunks: list[LLMChunk] = []
         async with aclosing(
             self.inner.stream_chat(
@@ -263,7 +311,5 @@ class RecordingClient(BaseLLMClient):
                 chunks.append(chunk)
                 yield chunk
         # A failed or abandoned stream never reaches this line, so no partial fixture.
-        key = request_key(self.model, messages, tools, response_format, tool_choice)
-        uuids = _request_uuids(messages, tools, response_format, tool_choice)
         mapped = _map_chunks(chunks, uuids, record=True)
         await asyncio.to_thread(_save_chunks, key, self.model, mapped)

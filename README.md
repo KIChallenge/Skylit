@@ -184,6 +184,18 @@ make record-demo
 make check-demo
 ```
 
+Die Make-Ziele spielen nur den Golden Path ab.
+Die drei Show-Fälle (Kopfschmerz, Pflegegeld, Vorsorge) laufen mit `--case`:
+
+```bash
+cd backend && uv run python -m scripts.record_demo --base-url http://localhost:8000 --case all
+cd backend && uv run python -m scripts.record_demo --base-url http://localhost:8000 --case all --check
+```
+
+Eine vorhandene Aufnahme gewinnt auch bei `LLM_RECORD=1` gegen einen Live-Aufruf.
+Neue Fälle verändern so keine fertigen Aufnahmen.
+Löschen Sie eine Aufnahme, um sie neu aufzunehmen.
+
 ## Abhängigkeiten und Voraussetzungen
 
 - Docker mit Compose ab Version 2.24 und GNU Make für den Start.
@@ -222,6 +234,10 @@ Umgebungsvariablen haben Vorrang vor `.env`.
 | `LLM_PROVIDER` | Anbieter: `eustella`, `azure`, `fake` oder `replay` | `replay` |
 | `LLM_RECORD` | Live-Antworten aufzeichnen | `false` |
 | `LLM_FIXTURES_DIR` | Verzeichnis der Aufzeichnungen | `demo/fixtures` |
+| `LLM_REPLAY_FIRST_TOKEN_MS` | Replay: Wartezeit bis zum ersten Token in ms, `0` aus | `0` |
+| `LLM_REPLAY_CHARS_PER_SECOND` | Replay: Streaming-Tempo in Zeichen pro Sekunde, `0` aus | `0` |
+| `LLM_REPLAY_MAX_SECONDS` | Replay: höchste Wartezeit pro Modellaufruf in Sekunden | `12` |
+| `LLM_REPLAY_FALLBACK` | Replay: Ziel bei fehlender Aufnahme: `fake`, `eustella` oder `azure` | `fake` |
 | `EUSTELLA_API_KEY` | eustella-Schlüssel | `rk_your_key_here` |
 | `EUSTELLA_BASE_URL` | eustella-API-Adresse | `https://api.eustella.com/v1` |
 | `EUSTELLA_MODEL` | eustella-Modell | `eustella-v1.5` |
@@ -261,6 +277,7 @@ Umgebungsvariablen haben Vorrang vor `.env`.
 | `NEXT_PUBLIC_API_URL` | Backend-Adresse, wie der Browser sie aufruft | `http://localhost:8000` |
 | `NEXT_PUBLIC_API_TIMEOUT_MS` | Timeout pro REST-Anfrage und bis zu den Stream-Headern in ms | `15000` |
 | `NEXT_PUBLIC_STREAM_IDLE_TIMEOUT_MS` | Längste Pause zwischen zwei SSE-Chunks in ms, über `LLM_TIMEOUT_SECONDS` | `130000` |
+| `NEXT_PUBLIC_DEMO_AUTOPILOT` | `1` schaltet den Autopiloten für die Jury-Demo ein | leer |
 | `PLAYWRIGHT_CHANNEL` | Optionaler lokaler Browser für Playwright, zum Beispiel `chrome` | leer |
 | `RUN_LIVE` | `1` führt Dokumenttests gegen das Live-Modell aus | leer |
 | `RUN_SLOW` | `1` führt langsame RAG-Tests aus | leer |
@@ -285,6 +302,9 @@ Das Frontend nutzt `PORT` nur aus der Shell. Den Wert `PORT` aus `.env` liest nu
 - Die Standortabfrage braucht HTTPS oder `localhost`. Ohne Freigabe rechnet der Lotse ab dem Mittelpunkt des Bezirks.
 - Der Lotse trägt keine Kalendertermine selbst ein; die Person speichert sie. Die Demo-Termine liegen relativ zum Seed-Tag. Nach einigen Tagen legt `make seed-reset` sie neu an.
 - Der Lotse füllt drei Formulare vor: Pflegegeld (PVA), Kur und Reha sowie Fahrtkostenzuschuss (ÖGK). Ein Mensch muss die Feldzuordnungen noch prüfen.
+- Replay trifft nur bei exakt gleichen Eingaben. Tippen Sie die Texte aus [docs/PITCH.md](docs/PITCH.md) wörtlich, klicken Sie dieselben SAMPLER-Optionen und geben Sie den Standort nicht frei. Eine Abweichung fällt auf `fake` zurück.
+- Die Texte aus der Aufnahme nennen feste Termindaten (z. B. 09.11.2026). An einem anderen Tag berechnet das Tool andere Termine als der Text.
+- Die SVS-Angaben zum Gesundheitshunderter (100 Euro, Frist der Vorsorgeuntersuchung) stammen von der WKO mit Stand 02.02.2023. Ein Mensch muss sie auf svs.at prüfen.
 - eustella ist eine Closed Beta mit zwei parallelen Aufrufen und 20 Anfragen pro Minute.
 - Der Red-Flag-Check nutzt Schlüsselwörter und kann Fehlalarme auslösen.
 - Bei Live-Läufen begann eine Ablehnung selten auf Englisch.

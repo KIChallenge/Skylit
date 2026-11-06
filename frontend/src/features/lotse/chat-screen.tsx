@@ -23,6 +23,7 @@ import { LocationDialog, LocationProvider, useLocation } from "@/features/locati
 import { ConversationView, EmergencyBanner } from "@/features/chat";
 import { createConversationController, type ConversationController } from "@/features/conversation/controller";
 import { createConversationState } from "@/features/conversation/model";
+import { useAutopilot } from "@/features/demo-autopilot";
 import { AnswerFooter } from "@/features/transparency";
 import { createUploadController, type UploadController, type UploadResult, type UploadState } from "@/features/upload/controller";
 import { api, TransportError, type Conversation, type ConversationSummary, type Me, type MessageCreate } from "@/lib/api";
@@ -229,6 +230,15 @@ function LoadedChatView({ me, conversation, conversations }: Loaded) {
     cards: state.currentAnswer?.cards,
   });
   const visibleMessages = bridge.messages.filter((message) => !sampler.hidden.has(message.id));
+  const openSession = [...sampler.sessions.values()].find((session) => session.state === "asking" && session.answerable);
+  const openQuestion = openSession?.steps.at(-1)?.question;
+  const typeRequest = useAutopilot({
+    enabled: config.demoAutopilot,
+    personaId: me.persona_id,
+    sent: bridge.messages.filter((message) => message.role === "user").map((message) => message.content),
+    busy: state.status === "streaming" || waitingForUpload,
+    openQuestion: openQuestion ? { step: openQuestion.step, options: openQuestion.options } : null,
+  });
   const openSteps = displayedCase.steps.filter((step) => step.status !== "done").length;
   return <CalendarProvider conversationId={conversation.id}><AppShell
     header={<AppHeader actions={<PersonaMenu me={me} onLoggedOut={() => router.replace("/login")} />} />}
@@ -257,6 +267,7 @@ function LoadedChatView({ me, conversation, conversations }: Loaded) {
         onRetry={() => void send(unsent)} /></div> : null}
       <ConversationView messages={visibleMessages} responseText={sampler.hideLiveText ? "" : bridge.responseText}
         headerActions={<DepthSwitch key={me.user_id} initial={me.profile.depth} />}
+        typeRequest={typeRequest}
         sending={state.status === "streaming" || waitingForUpload}
         progressLabel={waitingForUpload ? "Dokument wird gelesen…" : state.progressLabel ?? undefined}
         error={state.error?.message}
@@ -272,6 +283,8 @@ function LoadedChatView({ me, conversation, conversations }: Loaded) {
           return cards.length ? <ResultCards cards={cards} latest={latest} onSend={(content) => void send(content)} /> : null;
         }}
         renderAnswerFooter={(message) => {
+          // A SAMPLER question uses no source: sources and confidence would only show search noise.
+          if (sampler.sessions.has(message.id)) return null;
           const detail = bridge.details.get(message.id);
           return <AnswerFooter messageId={detail?.transparencyMessageId ?? null} initialSources={detail?.sources} />;
         }}

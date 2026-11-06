@@ -66,5 +66,22 @@
     "lat": 48.2096,
     "lon": 16.3814,
     "source_url": "https://www.sozialministerium.gv.at/Services/Service-fuer-Buergerinnen-und-Buerger.html"
+  },
+  {
+    "id": "svs_wien",
+    "organisation": "Sozialversicherungsanstalt der Selbständigen",
+    "name": "SVS Wien – Hauptstelle",
+    "kind": "health_insurer",
+    "bundesland": "Wien",
+    "address": "Wiedner Hauptstraße 84-86",
+    "postal_code": "1051",
+    "city": "Wien",
+    "phone": "050 808 808",
+    "email": null,
+    "url": "https://www.svs.at",
+    "hours": "Beratung nur mit Terminvereinbarung (svs.at/termine)",
+    "lat": 48.1896,
+    "lon": 16.3641,
+    "source_url": "https://www.svs.at/kontakt"
   }
 ]

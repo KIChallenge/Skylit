@@ -72,6 +72,13 @@ export const config = {
       DEFAULT_STREAM_IDLE_TIMEOUT_MS,
     );
   },
+  /**
+   * Presenter autopilot for the jury demo: hidden shortcuts type the scripted prompts.
+   * Off unless NEXT_PUBLIC_DEMO_AUTOPILOT is "1".
+   */
+  get demoAutopilot(): boolean {
+    return process.env.NEXT_PUBLIC_DEMO_AUTOPILOT?.trim() === "1";
+  },
   /** `fetch` credentials mode for every backend call (cookie auth across origins). */
   apiCredentials: "include" satisfies RequestCredentials,
 } as const;

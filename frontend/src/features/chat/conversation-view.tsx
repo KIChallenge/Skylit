@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { EmptyState, ErrorState } from "@/components/ui/state";
 import type { Message } from "@/lib/api";
 
-import { Composer } from "./composer";
+import { Composer, type TypeRequest } from "./composer";
 
 export type ConversationViewProps = {
   messages: Message[];
@@ -27,6 +27,8 @@ export type ConversationViewProps = {
   attachment?: ReactNode;
   /** Controls beside the heading, e.g. the answer length switch. */
   headerActions?: ReactNode;
+  /** Presenter autopilot: text the composer types by itself. */
+  typeRequest?: TypeRequest | null;
 };
 
 function AnswerText({ content }: { content: string }) {
@@ -39,7 +41,7 @@ function AnswerText({ content }: { content: string }) {
 
 export function ConversationView({
   messages, responseText, sending, progressLabel, error, loading = false,
-  onSend, onRetry, renderMessageCards, renderAnswerFooter, attachment, headerActions,
+  onSend, onRetry, renderMessageCards, renderAnswerFooter, attachment, headerActions, typeRequest,
 }: ConversationViewProps) {
   const scroller = useRef<HTMLDivElement>(null);
   const contents = useRef<HTMLDivElement>(null);
@@ -131,7 +133,7 @@ export function ConversationView({
           }}><ArrowDown aria-hidden />Zu neuen Inhalten</Button>
         </div>
       ) : null}
-      <Composer sending={sending || loading} onSend={onSend} attachment={attachment} />
+      <Composer sending={sending || loading} onSend={onSend} attachment={attachment} typeRequest={typeRequest} />
     </section>
   );
 }
