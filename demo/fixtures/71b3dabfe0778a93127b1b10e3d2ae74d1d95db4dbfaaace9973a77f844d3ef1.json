@@ -1,0 +1,2576 @@
+{
+  "request_sha256": "71b3dabfe0778a93127b1b10e3d2ae74d1d95db4dbfaaace9973a77f844d3ef1",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "text",
+      "text": "Der",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Brief",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " (29",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ".10",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ".20",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "26)",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " nennt",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " mehrere",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Empfehlungen. Ich",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " lege daraus konkrete",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " administrative Schritte für",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Ihren",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Fall an.",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": "chatcmpl-tool-8b5e5526956cd83b",
+        "name": "upsert_case_step",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"title\": \"Pf"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "legegeld:"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Voraus"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "setzungen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " prüfen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"category\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "info"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"description\": \"Der"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Brief empfiehlt:"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " „Auf"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "grund des vorauss"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ichtlich längerfrist"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "igen Unterstütz"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ungsbedarfs"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " soll geprüft werden"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ", ob die"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Voraussetz"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ungen für Pflege"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "geld erfüllt sind"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ".“ Zust"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ändig"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " ist"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " die PVA"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ";"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " sie"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " entscheidet über den"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Anspruch."
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"leistung_id\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\"pflegegeld\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": "chatcmpl-tool-8c77b29acc5a896b",
+        "name": "upsert_case_step",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "{\"title\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "Mobile Haus"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "krankenpflege"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " über"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " F"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "SW bean"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "tragen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"category\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "contact"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"description\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "Der Brief empfiehlt"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " mobile"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " Hauskranken"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "pflege und den"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " Kontakt mit"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " Wiener Beratungsstellen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": ". An"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "tr"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "agsweg"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": ":"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " FSW-K"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "undenservice"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " 01"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " 24"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " 5 "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "24 ("
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "täglich "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "08:"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "00–"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "20:"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "00)"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " oder FSW"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "-Beratung"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "szentrum Pflege"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": " und Betreuung."
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"leistung_id\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 1,
+        "id": null,
+        "name": null,
+        "arguments": "\"mobile_pflege_wien\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": "chatcmpl-tool-9da1ad95e7c0c4e5",
+        "name": "upsert_case_step",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "{\"title\": \"On"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "kologische Re"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "ha: Antrag"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " vorbere"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "iten"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"category\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "form"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"description\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "Der Brief empfiehlt"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": ": „Pr"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "üfung einer"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " stationären on"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "kologischen Rehabilitation"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " nach Abschluss der"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " geplanten Strahl"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "entherapie“"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " und „"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "Der"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " Antrag soll rechtzeitig"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " mit dem beh"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "andelnden on"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "kologischen Team"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " bzw. der"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " Hausärztin"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": " vorbereitet werden.“"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"leistung_id\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 2,
+        "id": null,
+        "name": null,
+        "arguments": "\"onkologische_reha\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": "chatcmpl-tool-8dc13019e1e57e9a",
+        "name": "upsert_case_step",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "{\"title\": \"Re"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "zeptgebühren"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "befreiung"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " und"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " Transport prüfen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"category\": \"info"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"description\": \"Der"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " Brief empfiehlt die"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " Information über die"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " Voraussetz"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "ungen einer Rezept"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "gebührenbef"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "reiung sowie"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " die Prüfung einer"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " Transport"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "leistung für"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " die Bestra"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "hlungstermine"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": ". Die"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " zuständige Stelle"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": " entscheidet."
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"leistung_id\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 3,
+        "id": null,
+        "name": null,
+        "arguments": "\"rezeptgebuehrenbefreiung\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": "chatcmpl-tool-b594a20d2bb52149",
+        "name": "upsert_case_step",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "{\"title\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "Kont"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "rolltermine"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": " ein"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "planen"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"category\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "appointment"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"description\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "F"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "äll"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "ige Termine laut"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": " Brief: haus"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "ärztliche Kontrolle"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": ", Ko"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "ordination der weiteren"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": " Bestrahlung"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "stermine,"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": " regelmäßige on"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "kologische Amb"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "ulanz."
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 4,
+        "id": null,
+        "name": null,
+        "arguments": "\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 11080,
+        "completion_tokens": 623,
+        "cached_tokens": 9536
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 11080,
+        "completion_tokens": 623,
+        "cached_tokens": 9536
+      },
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8b5e5526956cd83b",
+          "name": "upsert_case_step",
+          "arguments": {
+            "title": "Pflegegeld: Voraussetzungen prüfen",
+            "category": "info",
+            "description": "Der Brief empfiehlt: „Aufgrund des voraussichtlich längerfristigen Unterstützungsbedarfs soll geprüft werden, ob die Voraussetzungen für Pflegegeld erfüllt sind.“ Zuständig ist die PVA; sie entscheidet über den Anspruch.",
+            "leistung_id": "pflegegeld"
+          },
+          "raw_arguments": "{\"title\": \"Pflegegeld: Voraussetzungen prüfen\", \"category\": \"info\", \"description\": \"Der Brief empfiehlt: „Aufgrund des voraussichtlich längerfristigen Unterstützungsbedarfs soll geprüft werden, ob die Voraussetzungen für Pflegegeld erfüllt sind.“ Zuständig ist die PVA; sie entscheidet über den Anspruch.\", \"leistung_id\": \"pflegegeld\"}",
+          "parse_error": null
+        },
+        {
+          "id": "chatcmpl-tool-8c77b29acc5a896b",
+          "name": "upsert_case_step",
+          "arguments": {
+            "title": "Mobile Hauskrankenpflege über FSW beantragen",
+            "category": "contact",
+            "description": "Der Brief empfiehlt mobile Hauskrankenpflege und den Kontakt mit Wiener Beratungsstellen. Antragsweg: FSW-Kundenservice 01 24 5 24 (täglich 08:00–20:00) oder FSW-Beratungszentrum Pflege und Betreuung.",
+            "leistung_id": "mobile_pflege_wien"
+          },
+          "raw_arguments": "{\"title\": \"Mobile Hauskrankenpflege über FSW beantragen\", \"category\": \"contact\", \"description\": \"Der Brief empfiehlt mobile Hauskrankenpflege und den Kontakt mit Wiener Beratungsstellen. Antragsweg: FSW-Kundenservice 01 24 5 24 (täglich 08:00–20:00) oder FSW-Beratungszentrum Pflege und Betreuung.\", \"leistung_id\": \"mobile_pflege_wien\"}",
+          "parse_error": null
+        },
+        {
+          "id": "chatcmpl-tool-9da1ad95e7c0c4e5",
+          "name": "upsert_case_step",
+          "arguments": {
+            "title": "Onkologische Reha: Antrag vorbereiten",
+            "category": "form",
+            "description": "Der Brief empfiehlt: „Prüfung einer stationären onkologischen Rehabilitation nach Abschluss der geplanten Strahlentherapie“ und „Der Antrag soll rechtzeitig mit dem behandelnden onkologischen Team bzw. der Hausärztin vorbereitet werden.“",
+            "leistung_id": "onkologische_reha"
+          },
+          "raw_arguments": "{\"title\": \"Onkologische Reha: Antrag vorbereiten\", \"category\": \"form\", \"description\": \"Der Brief empfiehlt: „Prüfung einer stationären onkologischen Rehabilitation nach Abschluss der geplanten Strahlentherapie“ und „Der Antrag soll rechtzeitig mit dem behandelnden onkologischen Team bzw. der Hausärztin vorbereitet werden.“\", \"leistung_id\": \"onkologische_reha\"}",
+          "parse_error": null
+        },
+        {
+          "id": "chatcmpl-tool-8dc13019e1e57e9a",
+          "name": "upsert_case_step",
+          "arguments": {
+            "title": "Rezeptgebührenbefreiung und Transport prüfen",
+            "category": "info",
+            "description": "Der Brief empfiehlt die Information über die Voraussetzungen einer Rezeptgebührenbefreiung sowie die Prüfung einer Transportleistung für die Bestrahlungstermine. Die zuständige Stelle entscheidet.",
+            "leistung_id": "rezeptgebuehrenbefreiung"
+          },
+          "raw_arguments": "{\"title\": \"Rezeptgebührenbefreiung und Transport prüfen\", \"category\": \"info\", \"description\": \"Der Brief empfiehlt die Information über die Voraussetzungen einer Rezeptgebührenbefreiung sowie die Prüfung einer Transportleistung für die Bestrahlungstermine. Die zuständige Stelle entscheidet.\", \"leistung_id\": \"rezeptgebuehrenbefreiung\"}",
+          "parse_error": null
+        },
+        {
+          "id": "chatcmpl-tool-b594a20d2bb52149",
+          "name": "upsert_case_step",
+          "arguments": {
+            "title": "Kontrolltermine einplanen",
+            "category": "appointment",
+            "description": "Fällige Termine laut Brief: hausärztliche Kontrolle, Koordination der weiteren Bestrahlungstermine, regelmäßige onkologische Ambulanz."
+          },
+          "raw_arguments": "{\"title\": \"Kontrolltermine einplanen\", \"category\": \"appointment\", \"description\": \"Fällige Termine laut Brief: hausärztliche Kontrolle, Koordination der weiteren Bestrahlungstermine, regelmäßige onkologische Ambulanz.\"}",
+          "parse_error": null
+        }
+      ],
+      "model": "eustella-v1.5",
+      "request_id": "req_d202e6ce3aad54ee1c882961",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "14910",
+        "x-ratelimit-remaining-requests": "17",
+        "x-ratelimit-remaining-tokens": "76773",
+        "x-ratelimit-reset-output-tokens": "2s",
+        "x-ratelimit-reset-requests": "6s",
+        "x-ratelimit-reset-tokens": "12s"
+      }
+    }
+  ]
+}

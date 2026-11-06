@@ -1,0 +1,148 @@
+# =============================================================
+#  SECRETS — never commit
+# =============================================================
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+secrets/
+credentials*.json
+service-account*.json
+
+# Organiser document: contains the SV-Box password.
+Use Case 1 Versicherten-Chatbot*.docx
+
+# =============================================================
+#  DATA — synthetic samples only, raw downloads stay local
+# =============================================================
+data/raw/
+data/svbox/
+data/private/
+uploads/
+backend/uploads/
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# Local embedding model cache (fastembed / Hugging Face)
+.cache/
+# Root only: backend/app/models/ (SQLAlchemy models) must stay tracked.
+/models/
+fastembed_cache/
+local_cache/
+.hf_cache/
+
+# =============================================================
+#  PYTHON (backend)
+# =============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.cover
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =============================================================
+#  NODE / NEXT.JS (frontend)
+# =============================================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.next/
+out/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+coverage/
+
+# Generated API client (rebuilt from the FastAPI OpenAPI spec)
+frontend/src/lib/api/schema.d.ts
+
+# =============================================================
+#  DOCKER
+# =============================================================
+docker-compose.override.yml
+compose.override.yml
+pgdata/
+postgres-data/
+
+# =============================================================
+#  LOGS
+# =============================================================
+logs/
+*.log
+
+# =============================================================
+#  EDITORS / OS / AGENTS
+# =============================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code: personal settings stay local, shared settings are committed
+.claude/settings.local.json
+CLAUDE.local.md
+
+# added by hackkit
+*.local.*
+test-results/
+playwright-report/
+blob-report/
+.hackkit/worktrees/
+.hackkit/logs/

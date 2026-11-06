@@ -1,0 +1,272 @@
+[
+  {
+    "id": "pflegegeld",
+    "title": "Pflegegeld",
+    "category": "pflege",
+    "short": "Monatlicher pauschalierter Beitrag zu pflegebedingten Mehraufwendungen.",
+    "conditions": [
+      "Ständiger Betreuungs- und Hilfsbedarf wegen einer körperlichen, geistigen oder psychischen Behinderung oder einer Sinnesbehinderung",
+      "Pflegebedarf besteht voraussichtlich für mindestens sechs Monate",
+      "Monatlicher Pflegebedarf von mehr als 65 Stunden (Einstieg ab Stufe 1)",
+      "Gewöhnlicher Aufenthalt im Bundesgebiet Österreich"
+    ],
+    "office_kind": "pension_insurer",
+    "form_ids": [
+      "pva_pflegegeld"
+    ],
+    "documents_needed": [
+      "Ausgefüllter und unterschriebener Antrag auf Pflegegeld (PVA)",
+      "Aktuelle ärztliche Befunde und Krankenhausentlassungsberichte",
+      "Ggf. Nachweis über Erwachsenenvertretung oder Vollmacht"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/pflege/4/Seite.360512"
+  },
+  {
+    "id": "mobile_pflege_wien",
+    "title": "Mobile Pflege- und Betreuungsdienste Wien",
+    "category": "pflege",
+    "short": "FSW-geförderte Hauskrankenpflege, Heimhilfe und mobile Dienste in Wien.",
+    "conditions": [
+      "Hauptwohnsitz in Wien",
+      "Tatsächlicher Pflege- oder Unterstützungsbedarf bei Körperpflege, Mobilisation oder Alltagsführung",
+      "Förderbewilligung durch den Fonds Soziales Wien (FSW)",
+      "Bereitschaft zur Leistung eines einkommens- und vermögensabhängigen Kostenbeitrags"
+    ],
+    "office_kind": "care_services_wien",
+    "form_ids": [],
+    "documents_needed": [
+      "FSW-Antrag auf Förderung von Pflege- und Betreuungsleistungen",
+      "Einkommensnachweise aller Personen im gemeinsamen Haushalt",
+      "Aktuelle ärztliche Befunde bzw. Entlassungsbefund",
+      "Pflegegeldbescheid (falls bereits bezogen)"
+    ],
+    "source_url": "https://www.fsw.at/p/anbieter-hauskrankenpflege"
+  },
+  {
+    "id": "pflegeberatung",
+    "title": "Kostenlose Pflege- und Betreuungsberatung Wien",
+    "category": "pflege",
+    "short": "Persönliche und telefonische Beratung zu Betreuungsangeboten und Förderungen in Wien.",
+    "conditions": [
+      "Wohnsitz, Aufenthalt oder geplanter Pflegebedarf in Wien",
+      "Bedarf an Information, Orientierung oder Hilfsmitteln bei Pflegebedürftigkeit",
+      "Kostenlos und unverbindlich für Betroffene und pflegende Angehörige"
+    ],
+    "office_kind": "care_services_wien",
+    "form_ids": [],
+    "documents_needed": [
+      "Keine Dokumente zwingend erforderlich (vorhandene Befunde oder Pflegegeldeinstufung sind hilfreich)"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/pflege/5/Seite.360524"
+  },
+  {
+    "id": "24h_betreuung",
+    "title": "Förderung der 24-Stunden-Betreuung",
+    "category": "pflege",
+    "short": "Finanzieller Zuschuss des Sozialministeriumservice zur 24-Stunden-Betreuung im eigenen Zuhause.",
+    "conditions": [
+      "Bezug von Pflegegeld mindestens ab Stufe 3 (bei nachgewiesener Demenz ab Stufe 1 oder 2)",
+      "Notwendigkeit einer ständigen 24-Stunden-Betreuung",
+      "Vorliegen eines Betreuungsverhältnisses nach dem Hausbetreuungsgesetz mit qualifizierten Betreuungspersonen",
+      "Monatliches Nettoeinkommen der pflegebedürftigen Person darf maximal 2.500 Euro betragen (ohne Pflegegeld und Sonderzahlungen)"
+    ],
+    "office_kind": "ministry_hotline",
+    "form_ids": [],
+    "documents_needed": [
+      "Antrag auf Gewährung einer Zuwendung zur Unterstützung der 24-Stunden-Betreuung",
+      "Pflegegeldbescheid",
+      "Einkommensnachweise der pflegebedürftigen Person",
+      "Kopie des Betreuungsvertrags und Gewerbeberechtigung der Betreuungsperson"
+    ],
+    "source_url": "https://www.sozialministeriumservice.gv.at/Angehoerige/Pflege_und_Betreuung/24-Stunden-Betreuung/24-Stunden-Betreuung.de.html"
+  },
+  {
+    "id": "pflegekarenz",
+    "title": "Pflegekarenz und Pflegeteilzeit (Pflegekarenzgeld)",
+    "category": "pflege",
+    "short": "Freistellung von der Arbeit bzw. Reduktion der Arbeitszeit mit Rechtsanspruch auf Pflegekarenzgeld.",
+    "conditions": [
+      "Pflegebedürftige nahe Angehörige mit Bezug von Pflegegeld ab Stufe 3 (bei Demenz oder minderjährigen Kindern ab Stufe 1)",
+      "Schriftliche Vereinbarung über Pflegekarenz oder Pflegeteilzeit mit dem Dienstgeber",
+      "Dauer zwischen 1 und maximal 3 Monaten pro pflegebedürftiger Person",
+      "Unmittelbar vor Beginn bestand eine vollversicherte Erwerbstätigkeit (mindestens drei Monate)",
+      "Überwiegende Erbringung der Pflege durch die antragstellende Person"
+    ],
+    "office_kind": "ministry_hotline",
+    "form_ids": [],
+    "documents_needed": [
+      "Antrag auf Pflegekarenzgeld beim Sozialministeriumservice",
+      "Schriftliche Vereinbarung mit dem Dienstgeber",
+      "Pflegegeldbescheid der gepflegten Person",
+      "Nachweis des Verwandtschaftsverhältnisses"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/pflege/5/1/Seite.360527"
+  },
+  {
+    "id": "rehabilitation",
+    "title": "Medizinische Rehabilitation",
+    "category": "reha",
+    "short": "Stationäre oder ambulante Heilverfahren zur Wiederherstellung der Gesundheit und Arbeitsfähigkeit.",
+    "conditions": [
+      "Zustand nach schwerer Erkrankung, Unfall oder Operation mit anhaltenden Funktionsstörungen",
+      "Rehabilitationsbedürftigkeit, Rehabilitationsfähigkeit und günstige Rehabilitationsprognose",
+      "Vorliegen eines ärztlich begründeten Antrags",
+      "Zuständigkeit der Pensionsversicherung (PVA) zur Vermeidung von Berufsunfähigkeit oder Invalidität"
+    ],
+    "office_kind": "pension_insurer",
+    "form_ids": [
+      "kur_reha"
+    ],
+    "documents_needed": [
+      "Gemeinsamer Antrag auf Rehabilitations-, Kur- bzw. Erholungsaufenthalt",
+      "Ärztlicher Befundbericht mit Begründung der Reha-Bedürftigkeit",
+      "Aktuelle Krankenhausentlassungsberichte und Befunde"
+    ],
+    "source_url": "https://www.pv.at/web/reha-und-praevention/medizinische-rehabilitation"
+  },
+  {
+    "id": "onkologische_reha",
+    "title": "Onkologische Rehabilitation",
+    "category": "reha",
+    "short": "Spezialisierte Rehabilitation für Patientinnen und Patienten nach Krebserkrankung und Tumortherapie.",
+    "conditions": [
+      "Abgeschlossene oder stabile Akutphase einer Krebserkrankung (z. B. nach Operation, Chemo- oder Strahlentherapie)",
+      "Bedarf an körperlicher, funktioneller oder psychoonkologischer Stabilisierung",
+      "Rehabilitationsfähigkeit (keine akute stationäre Spitalsbehandlungsbedürftigkeit)",
+      "Befürwortung im Entlassungsbericht oder durch die behandelnde Fachärztin / den behandelnden Facharzt"
+    ],
+    "office_kind": "pension_insurer",
+    "form_ids": [
+      "kur_reha"
+    ],
+    "documents_needed": [
+      "Antrag auf Rehabilitations-, Kur- bzw. Erholungsaufenthalt",
+      "Onkologischer Entlassungsbefund und histologische Befunde",
+      "Ärztlicher Befundbericht der behandelnden Ärztin / des behandelnden Arztes"
+    ],
+    "source_url": "https://www.pv.at/web/reha-und-praevention/medizinische-rehabilitation"
+  },
+  {
+    "id": "kur",
+    "title": "Kur- und Erholungsaufenthalt",
+    "category": "reha",
+    "short": "Freiwillige Leistung der Sozialversicherung zur Festigung der Gesundheit bei chronischen Erkrankungen.",
+    "conditions": [
+      "Vorliegen eines chronischen Leidens, das eine Kurmaßnahme medizinisch notwendig macht",
+      "Medizinische Begründung durch die behandelnde Ärztin / den behandelnden Arzt",
+      "Antragstellung und chefärztliche Bewilligung vor Antritt des Aufenthalts",
+      "Wartezeit von in der Regel mindestens zwei Jahren seit dem letzten Kuraufenthalt",
+      "Bereitschaft zur einkommensabhängigen täglichen Zuzahlung"
+    ],
+    "office_kind": "pension_insurer",
+    "form_ids": [
+      "kur_reha"
+    ],
+    "documents_needed": [
+      "Antrag auf Rehabilitations-, Kur- bzw. Erholungsaufenthalt",
+      "Ärztliche Begründung und aktuelle medizinische Befunde",
+      "Einkommensnachweis (für eventuelle Zuzahlungsbefreiung)"
+    ],
+    "source_url": "https://www.oegk.at/cdscontent/?contentid=10007.867522"
+  },
+  {
+    "id": "rezeptgebuehrenbefreiung",
+    "title": "Rezeptgebührenbefreiung",
+    "category": "kosten",
+    "short": "Befreiung von der gesetzlichen Rezeptgebühr aus sozialen Gründen oder bei Erreichen der Obergrenze.",
+    "conditions": [
+      "Monatliches Nettoeinkommen unter dem Richtsatz (2026: Alleinstehende 1.308,39 Euro, bei chronischer Krankheit 1.504,65 Euro; Paare 2.064,12 Euro)",
+      "Oder automatisch nach Erreichen der Obergrenze von 2 Prozent des Jahresnettoeinkommens für Rezeptgebühren (Rezeptgebührenkonto)",
+      "Oder von Gesetzes wegen ohne Antrag (z. B. Bezug von Ausgleichszulage oder Mindestsicherung)"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "Antrag auf Befreiung von der Rezeptgebühr bei der zuständigen Krankenkasse (ÖGK)",
+      "Einkommensnachweise aller im gemeinsamen Haushalt lebenden Personen",
+      "Ärztliche Bestätigung über erhöhten Medikamentenaufwand bei chronischer Krankheit (falls zutreffend)"
+    ],
+    "source_url": "https://www.oegk.at/cdscontent/?contentid=10007.870471"
+  },
+  {
+    "id": "fahrtkostenzuschuss",
+    "title": "Zuschuss zu Fahrt- und Reisekosten",
+    "category": "kosten",
+    "short": "Kostenersatz für Fahrten zur medizinischen Behandlung bei der ÖGK.",
+    "conditions": [
+      "Fahrt zur notwendigen ambulanten Behandlung bei der nächstgelegenen geeigneten Vertragseinrichtung",
+      "Ärztliche Bestätigung über die Notwendigkeit der Behandlung",
+      "Benützung öffentlicher Verkehrsmittel (Ersatz der tatsächlichen Kosten) oder privates Kfz (halbes amtliches Kilometergeld)",
+      "Bestehende Rezeptgebührenbefreiung oder erhebliche Gehbehinderung gemäß Richtlinien der ÖGK"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [
+      "fahrtkosten_wien"
+    ],
+    "documents_needed": [
+      "Antrag auf Zuschuss zu Fahrtkosten (ÖGK Wien)",
+      "Ärztliche Bestätigung über Behandlungstage und Notwendigkeit der Fahrten",
+      "Fahrkarten bzw. Nachweis über gefahrene Kilometer",
+      "Nachweis über Rezeptgebührenbefreiung (falls vorhanden)"
+    ],
+    "source_url": "https://www.oegk.at/cdscontent/?contentid=10007.870423"
+  },
+  {
+    "id": "krankentransport",
+    "title": "Krankentransport und Krankenbeförderung",
+    "category": "kosten",
+    "short": "Transport mit Krankenwagen oder Fahrtendienst bei medizinisch begründeter Gehunfähigkeit.",
+    "conditions": [
+      "Ärztliche Transportanweisung über Gehunfähigkeit vor Fahrtantritt",
+      "Gehunfähigkeit bedeutet: Fortbewegung außerhalb der Wohnung ist auch mit Gehhilfe oder Begleitperson nicht möglich",
+      "Transport zur nächstgelegenen geeigneten Vertragseinrichtung bzw. Krankenanstalt oder Rücktransport",
+      "Selbstbehalt von 7,55 Euro (Fahrtendienst/Taxi) bzw. 15,10 Euro (sanitätsdienstliche Begleitung); entfällt bei Rezeptgebührenbefreiung, Serienbehandlung (Chemo-/Strahlentherapie) oder Notfall"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "Ärztliche Transportanweisung der behandelnden Ärztin / des behandelnden Arztes",
+      "e-card des Versicherten"
+    ],
+    "source_url": "https://www.oegk.at/cdscontent/?contentid=10007.870423"
+  },
+  {
+    "id": "eltern_kind_pass",
+    "title": "Eltern-Kind-Pass (vormals Mutter-Kind-Pass)",
+    "category": "kind",
+    "short": "Gesundheitsvorsorgeprogramm für Schwangere, Babys und Kleinkinder bis zum 5. Lebensjahr.",
+    "conditions": [
+      "Bestehende Schwangerschaft bzw. Betreuung eines Kindes bis zum 62. Lebensmonat",
+      "Wohnsitz oder gewöhnlicher Aufenthalt in Österreich",
+      "Einhaltung der vorgeschriebenen Untersuchungstermine (5 in der Schwangerschaft, 5 beim Kind) als Voraussetzung für das volle Kinderbetreuungsgeld",
+      "Untersuchungen sind bei Vertragsärztinnen/-ärzten und in ÖGK-Gesundheitszentren kostenlos"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "Eltern-Kind-Pass (ausgestellt von Gynäkologin/Gynäkologe oder Hausärztin/Hausarzt)",
+      "e-card der Schwangeren bzw. des Kindes",
+      "Lichtbildausweis"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/familie_und_partnerschaft/eltern-kind-pass/Seite.082211"
+  },
+  {
+    "id": "kinderimpfprogramm",
+    "title": "Kostenfreies Kinderimpfprogramm",
+    "category": "kind",
+    "short": "Kostenfreie Schutzimpfungen vom Säuglingsalter bis zum vollendeten 15. Lebensjahr.",
+    "conditions": [
+      "Kinder und Jugendliche bis zum vollendeten 15. Lebensjahr (ausgewählte Impfungen wie HPV bis 21 Jahre)",
+      "Gewöhnlicher Aufenthalt in Österreich (unabhängig vom Krankenversicherungsstatus)",
+      "Durchführung bei teilnehmenden Vertragsärztinnen/-ärzten, Schulärzten oder öffentlichen Impfstellen (z. B. Impfservice Wien)",
+      "Umfasst alle im offiziellen Impfplan Österreich empfohlenen Kinderimpfungen (u. a. 6-fach-Impfung, Rotaviren, Pneumokokken, MMR, HPV)"
+    ],
+    "office_kind": "health_insurer",
+    "form_ids": [],
+    "documents_needed": [
+      "e-Impfpass bzw. Impfpass des Kindes",
+      "e-card des Kindes"
+    ],
+    "source_url": "https://www.sozialministerium.gv.at/Themen/Gesundheit/Impfen/Kostenfreies-Kinderimpfprogramm.html"
+  }
+]

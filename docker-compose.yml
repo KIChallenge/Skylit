@@ -1,0 +1,84 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lotse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+      POSTGRES_DB: ${POSTGRES_DB:-lotse}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+  backend:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://${POSTGRES_USER:-lotse}:${POSTGRES_PASSWORD:-change-me}@db:5432/${POSTGRES_DB:-lotse}}
+      BACKEND_PORT: ${BACKEND_PORT:-8000}
+      PORT: ${BACKEND_PORT:-8000}
+      # Cookie auth needs the exact frontend origin (docs/contracts.md §1).
+      BACKEND_CORS_ORIGINS: ${BACKEND_CORS_ORIGINS:-http://localhost:${FRONTEND_PORT:-3000}}
+      LLM_PROVIDER: ${LLM_PROVIDER:-replay}
+      LLM_FIXTURES_DIR: /app/demo/fixtures
+      EMBEDDING_CACHE_DIR: ${EMBEDDING_CACHE_DIR:-/models}
+      UPLOAD_DIR: ${UPLOAD_DIR:-/data/uploads}
+    ports:
+      - "${BACKEND_PORT:-8000}:${BACKEND_PORT:-8000}"
+    volumes:
+      - models:${EMBEDDING_CACHE_DIR:-/models}
+      - uploads:${UPLOAD_DIR:-/data/uploads}
+      - ./demo/fixtures:/app/demo/fixtures:ro
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - >-
+          from urllib.request import urlopen;
+          from app.config import settings;
+          urlopen(f'http://127.0.0.1:{settings.port or settings.backend_port}/api/health', timeout=2).close()
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 60s
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # The browser calls this URL. Next.js inlines it at build time; make run rebuilds.
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:${BACKEND_PORT:-8000}}
+        NEXT_PUBLIC_API_TIMEOUT_MS: ${NEXT_PUBLIC_API_TIMEOUT_MS:-}
+        NEXT_PUBLIC_STREAM_IDLE_TIMEOUT_MS: ${NEXT_PUBLIC_STREAM_IDLE_TIMEOUT_MS:-}
+    depends_on:
+      backend:
+        condition: service_healthy
+    # No env_file: the frontend container needs no secrets.
+    environment:
+      PORT: ${FRONTEND_PORT:-3000}
+      HOSTNAME: 0.0.0.0
+    ports:
+      - "${FRONTEND_PORT:-3000}:${FRONTEND_PORT:-3000}"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null \"http://127.0.0.1:$$PORT/\" || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 10s
+
+volumes:
+  pgdata:
+  models:
+  uploads:

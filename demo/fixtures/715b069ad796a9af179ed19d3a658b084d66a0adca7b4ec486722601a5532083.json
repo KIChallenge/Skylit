@@ -1,0 +1,280 @@
+{
+  "request_sha256": "715b069ad796a9af179ed19d3a658b084d66a0adca7b4ec486722601a5532083",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": "chatcmpl-tool-9b4e9e5c4a0bb235",
+        "name": "get_document",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"document_id\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "<u"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "uid"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ":0>"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 10203,
+        "completion_tokens": 57,
+        "cached_tokens": 8000
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 10203,
+        "completion_tokens": 57,
+        "cached_tokens": 8000
+      },
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9b4e9e5c4a0bb235",
+          "name": "get_document",
+          "arguments": {
+            "document_id": "<uuid:0>"
+          },
+          "raw_arguments": "{\"document_id\": \"<uuid:0>\"}",
+          "parse_error": null
+        }
+      ],
+      "model": "eustella-v1.5",
+      "request_id": "req_d7c2f4bba0d6eee3a41f1b20",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "14719",
+        "x-ratelimit-remaining-requests": "18",
+        "x-ratelimit-remaining-tokens": "85423",
+        "x-ratelimit-reset-output-tokens": "3s",
+        "x-ratelimit-reset-requests": "4s",
+        "x-ratelimit-reset-tokens": "7s"
+      }
+    }
+  ]
+}

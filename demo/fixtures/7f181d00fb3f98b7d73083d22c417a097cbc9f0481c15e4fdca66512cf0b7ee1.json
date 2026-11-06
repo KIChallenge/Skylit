@@ -1,0 +1,332 @@
+{
+  "request_sha256": "7f181d00fb3f98b7d73083d22c417a097cbc9f0481c15e4fdca66512cf0b7ee1",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "text",
+      "text": "Ich",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " habe eine Überg",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "abe an die",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " telefon",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ische Gesundheitsberatung",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " **14",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "50**",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " vorbereitet",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " (rund",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " um die Uhr",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " erreichbar).\n\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "S",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "oll ich außerdem",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " eine",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " **",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "E-Mail mit",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " den Beschwerden",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "**",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " an die nächste",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Hausärztin",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " in Wien",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " ent",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "werfen,",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " die Sie prüfen",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " und senden können",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "?",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 15220,
+        "completion_tokens": 58,
+        "cached_tokens": 12800
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 15220,
+        "completion_tokens": 58,
+        "cached_tokens": 12800
+      },
+      "finish_reason": "stop",
+      "tool_calls": [],
+      "model": "eustella-v1.5",
+      "request_id": "req_3fa6705c0830e3751fffc4db",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "15196",
+        "x-ratelimit-remaining-requests": "18",
+        "x-ratelimit-remaining-tokens": "36316",
+        "x-ratelimit-reset-output-tokens": "1s",
+        "x-ratelimit-reset-requests": "6s",
+        "x-ratelimit-reset-tokens": "37s"
+      }
+    }
+  ]
+}

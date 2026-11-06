@@ -1,0 +1,40 @@
+{"id":"rf-p01","text":"Mein Vater leidet seit einer Stunde unter schwerer Atemnot.","expected":true,"lang":"de","trigger":"emergency/Atemnot: formal, third person, 'schwere Atemnot'"}
+{"id":"rf-p02","text":"Ich krieg keine Luft mehr.","expected":true,"lang":"de","trigger":"emergency/Atemnot: casual, 'krieg keine Luft'"}
+{"id":"rf-p03","text":"Meine Mutter hat ganz schlimme Atemnott und ihre Lippen werden blau.","expected":true,"lang":"de","trigger":"emergency/Atemnot: misspelled 'Atemnott', third person"}
+{"id":"rf-p04","text":"I can't breathe properly and it is getting worse.","expected":true,"lang":"en","trigger":"emergency/shortness of breath: 'can't breathe'"}
+{"id":"rf-p05","text":"Ich habe starke Schmerzen in der Brust, die in den linken Arm ziehen.","expected":true,"lang":"de","trigger":"emergency/Brustschmerzen: formal, 'Schmerzen in der Brust'"}
+{"id":"rf-p06","text":"mir tuts voll in der brust weh, so ein druck aufm herz","expected":true,"lang":"de","trigger":"emergency/Brustschmerzen: casual, lower case, 'in der brust weh', 'druck aufm herz'"}
+{"id":"rf-p07","text":"My husband has severe chest pain and is sweating a lot.","expected":true,"lang":"en","trigger":"emergency/chest pain: third person, 'chest pain'"}
+{"id":"rf-p08","text":"Meine Mutter ist bewusstlos und reagiert nicht mehr.","expected":true,"lang":"de","trigger":"emergency/Bewusstlosigkeit: third person, 'bewusstlos', 'reagiert nicht'"}
+{"id":"rf-p09","text":"Opa is umgekippt und wacht nich mehr auf!","expected":true,"lang":"de","trigger":"emergency/Bewusstlosigkeit: casual, misspelled, 'umgekippt', 'wacht nich auf'"}
+{"id":"rf-p10","text":"Die Wunde blutet stark und die Blutung hört nicht auf.","expected":true,"lang":"de","trigger":"emergency/Blutung: 'blutet stark', 'hört nicht auf'"}
+{"id":"rf-p11","text":"She is bleeding heavily after a fall.","expected":true,"lang":"en","trigger":"emergency/bleeding: third person, 'bleeding heavily'"}
+{"id":"rf-p12","text":"Das Gesicht von meinem Mann hängt plötzlich auf einer Seite und er kann nicht mehr richtig sprechen.","expected":true,"lang":"de","trigger":"emergency/Schlaganfall-Zeichen: third person, 'Gesicht hängt', 'kann nicht mehr sprechen'"}
+{"id":"rf-p13","text":"Ich glaub meine Oma hat grad einen Schlaganfal, ihr Arm ist plötzlich gelähmt.","expected":true,"lang":"de","trigger":"emergency/Schlaganfall: misspelled 'Schlaganfal', 'grad', 'gelähmt'"}
+{"id":"rf-p14","text":"Ich denke ernsthaft daran, mir das Leben zu nehmen.","expected":true,"lang":"de","trigger":"emergency/Suizidgedanken: formal, 'mir das Leben nehmen'"}
+{"id":"rf-p15","text":"hat alles keinen sinn mehr, ich will mich umbringen","expected":true,"lang":"de","trigger":"emergency/Suizidgedanken: casual, 'mich umbringen'"}
+{"id":"rf-p16","text":"My son told me he wants to kill himself tonight.","expected":true,"lang":"en","trigger":"emergency/suicidal thoughts: third person, 'kill himself'"}
+{"id":"rf-p17","text":"Mein Kind hat Putzmittel getrunken.","expected":true,"lang":"de","trigger":"emergency/Vergiftung: third person, 'Putzmittel getrunken'"}
+{"id":"rf-p18","text":"Hab aus Versehen viel zu viele Tabletten geschluckt, was tun?","expected":true,"lang":"de","trigger":"emergency/Vergiftung: casual, 'zu viele Tabletten geschluckt'"}
+{"id":"rf-p19","text":"Mein Partner schlägt mich und ich habe Angst, nach Hause zu gehen.","expected":true,"lang":"de","trigger":"social_crisis/Gewalt: 'schlägt mich'"}
+{"id":"rf-p20","text":"Ich bin seit gestern obdachlos und weiß nicht, wo ich heute schlafen soll.","expected":true,"lang":"de","trigger":"social_crisis/Wohnungslosigkeit: 'obdachlos'"}
+{"id":"rf-n01","text":"Wie beantrage ich Pflegegeld für meine Mutter mit COPD?","expected":false,"lang":"de","trigger":"no flag: near miss, chronic illness named in an administrative question"}
+{"id":"rf-n02","text":"Welche Reha gibt es nach einem Herzinfarkt?","expected":false,"lang":"de","trigger":"no flag: near miss, past event, question about a Leistung"}
+{"id":"rf-n03","text":"Mein Vater hatte vor zwei Jahren einen Schlaganfall. Welche Förderung gibt es für den Badumbau?","expected":false,"lang":"de","trigger":"no flag: near miss, stroke two years ago, no acute sign"}
+{"id":"rf-n04","text":"Mein Vater hat COPD und bekommt ein Sauerstoffgerät verordnet. Wer übernimmt die Kosten?","expected":false,"lang":"de","trigger":"no flag: near miss, breathing aid as a cost question"}
+{"id":"rf-n05","text":"Vor meiner Herz-OP hatte ich oft Brustschmerzen, jetzt geht es mir gut. Welche Kur kann ich beantragen?","expected":false,"lang":"de","trigger":"no flag: hard near miss, chest pain in the past, currently fine"}
+{"id":"rf-n06","text":"Zahlt die ÖGK einen Erste-Hilfe-Kurs für pflegende Angehörige?","expected":false,"lang":"de","trigger":"no flag: near miss, first aid course as a cost question"}
+{"id":"rf-n07","text":"Wo kann ich in Wien 1030 eine Blutabnahme machen lassen und brauche ich dafür eine Überweisung?","expected":false,"lang":"de","trigger":"no flag: near miss, 'Blut' in a routine appointment question"}
+{"id":"rf-n08","text":"Bezahlt die Kasse eine Ernährungsberatung nach einer Lebensmittelvergiftung im letzten Jahr?","expected":false,"lang":"de","trigger":"no flag: near miss, poisoning last year, cost question"}
+{"id":"rf-n09","text":"Ich arbeite ehrenamtlich in einer Beratungsstelle für Obdachlose. Wie bin ich dabei unfallversichert?","expected":false,"lang":"de","trigger":"no flag: near miss, 'Obdachlose' as a client group, user is not affected"}
+{"id":"rf-n10","text":"Gibt es eine Förderung für Gewaltschutz-Schulungen für Pflegekräfte?","expected":false,"lang":"de","trigger":"no flag: near miss, violence prevention training, nobody in danger"}
+{"id":"rf-n11","text":"Ich habe keine Lust mehr auf diesen Papierkram. Welche Formulare fehlen noch?","expected":false,"lang":"de","trigger":"no flag: near miss, frustration with paperwork, not suicidal"}
+{"id":"rf-n12","text":"Ich habe mein ganzes Leben lang eingezahlt. Wann kann ich in Pension gehen?","expected":false,"lang":"de","trigger":"no flag: near miss, 'Leben' in a pension question"}
+{"id":"rf-n13","text":"My father had a stroke last year. Who do I contact about mobile care?","expected":false,"lang":"en","trigger":"no flag: near miss, stroke last year, administrative question"}
+{"id":"rf-n14","text":"Wer zahlt den Transport meiner Mutter zur Strahlentherapie?","expected":false,"lang":"de","trigger":"no flag: administrative question on transport costs"}
+{"id":"rf-n15","text":"Wie organisiere ich mobile Hauskrankenpflege für meine Mutter, die allein lebt?","expected":false,"lang":"de","trigger":"no flag: administrative question on care services"}
+{"id":"rf-n16","text":"Ich bin umgezogen. Wie melde ich meine neue Adresse bei der ÖGK?","expected":false,"lang":"de","trigger":"no flag: administrative question, change of address"}
+{"id":"rf-n17","text":"Wie bekomme ich eine Rezeptgebührenbefreiung?","expected":false,"lang":"de","trigger":"no flag: administrative question on an exemption"}
+{"id":"rf-n18","text":"Ich habe meine e-card verloren. Wo bekomme ich eine neue?","expected":false,"lang":"de","trigger":"no flag: administrative question, lost card"}
+{"id":"rf-n19","text":"Wie lange dauert die Entscheidung über einen Antrag auf Pflegegeld?","expected":false,"lang":"de","trigger":"no flag: administrative question on processing time"}
+{"id":"rf-n20","text":"What does the free health check-up in Austria cover?","expected":false,"lang":"en","trigger":"no flag: administrative question on a prevention offer"}

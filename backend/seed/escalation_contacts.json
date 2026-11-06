@@ -1,0 +1,134 @@
+[
+  {
+    "id": "rettung_144",
+    "name": "Rettungsdienst (Notruf)",
+    "phone": "144",
+    "url": "https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern",
+    "hours": "24/7 (täglich 0–24 Uhr)",
+    "note": "Akute lebensbedrohliche Notfälle, schwere Atemnot, Bewusstlosigkeit, akute Brustschmerzen, Verdacht auf Schlaganfall.",
+    "reason_codes": [
+      "emergency"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern"
+  },
+  {
+    "id": "euronotruf_112",
+    "name": "Euronotruf",
+    "phone": "112",
+    "url": "https://www.polizei.gv.at",
+    "hours": "24/7 (täglich 0–24 Uhr)",
+    "note": "Europaweiter Notruf bei akuter Lebensgefahr und Notfällen, gebührenfrei und netzübergreifend erreichbar.",
+    "reason_codes": [
+      "emergency"
+    ],
+    "source_url": "https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern"
+  },
+  {
+    "id": "gesundheitsberatung_1450",
+    "name": "Telefonische Gesundheitsberatung 1450",
+    "phone": "1450",
+    "url": "https://www.1450.at",
+    "hours": "24/7 (an 365 Tagen im Jahr, rund um die Uhr)",
+    "note": "Medizinische Ersteinschätzung durch diplomiertes Krankenpflegepersonal bei gesundheitlichen Fragen und Beschwerden außerhalb der Ordinationszeiten ohne akute Lebensgefahr.",
+    "reason_codes": [
+      "medical_question"
+    ],
+    "source_url": "https://1450.at/"
+  },
+  {
+    "id": "hausaerztin_behandelndes_team",
+    "name": "Hausärztin / Hausarzt oder behandelndes Spitalsteam",
+    "phone": null,
+    "url": null,
+    "hours": null,
+    "note": "Kontaktdaten stehen im Entlassungsbrief oder bei Ihrer Ordination.",
+    "reason_codes": [
+      "medical_question"
+    ],
+    "source_url": "https://www.oegk.at"
+  },
+  {
+    "id": "vergiftungsinformation_viz",
+    "name": "Vergiftungsinformationszentrale (VIZ)",
+    "phone": "01 406 43 43",
+    "url": "https://www.goeg.at/Vergiftungsinformation",
+    "hours": "24/7 (täglich 0–24 Uhr)",
+    "note": "Notruf und ärztliche Sofortberatung bei Vergiftungen oder Vergiftungsverdacht mit Medikamenten, Haushaltschemikalien, Pflanzen oder Pilzen.",
+    "reason_codes": [
+      "emergency",
+      "medical_question"
+    ],
+    "source_url": "https://www.goeg.at/Vergiftungsinformation"
+  },
+  {
+    "id": "telefonseelsorge_142",
+    "name": "Telefonseelsorge",
+    "phone": "142",
+    "url": "https://www.telefonseelsorge.at",
+    "hours": "24/7 (täglich 0–24 Uhr)",
+    "note": "Kostenlose, vertrauliche und anonyme Notfallhilfe bei seelischen Krisen, Überlastung und akuten suizidalen Gedanken.",
+    "reason_codes": [
+      "social_crisis",
+      "emergency"
+    ],
+    "source_url": "https://www.telefonseelsorge.at/"
+  },
+  {
+    "id": "oegk_kundenservice",
+    "name": "ÖGK Kundenservice",
+    "phone": "+43 5 0766-11",
+    "url": "https://www.oegk.at",
+    "hours": "Mo-Fr 07:00-14:30 Uhr",
+    "note": "Auskünfte und Beratung zu Krankenversicherungsleistungen, Rezeptgebührenbefreiung, Kostenübernahmen und Krankentransport.",
+    "reason_codes": [
+      "legal_uncertainty",
+      "no_source",
+      "user_stuck"
+    ],
+    "source_url": "https://www.oegk.at/cdscontent/?contentid=10007.870674&portal=oegkportal"
+  },
+  {
+    "id": "pva_service",
+    "name": "PVA Serviceline (Pensionsversicherungsanstalt)",
+    "phone": "+43 5 03 03",
+    "url": "https://www.pv.at",
+    "hours": "Mo-Mi 07:00-15:30 Uhr, Do 07:00-18:00 Uhr, Fr 07:00-15:00 Uhr",
+    "note": "Beratung und rechtliche Auskünfte zu Pflegegeld, Einstufung, medizinischer Rehabilitation, Kur und Pensionsangelegenheiten.",
+    "reason_codes": [
+      "legal_uncertainty",
+      "no_source",
+      "user_stuck"
+    ],
+    "source_url": "https://www.pv.at/web/service-und-kontakt/kontakt/wien/kontakt-wien"
+  },
+  {
+    "id": "fsw_beratungszentrum_pflege",
+    "name": "FSW Beratungszentrum Pflege und Betreuung",
+    "phone": "01 24 5 24",
+    "url": "https://pflege.fsw.at",
+    "hours": "Täglich 08:00-20:00 Uhr",
+    "note": "Information und Beratung zu Versorgungsangeboten in Wien (Hauskrankenpflege, Heimhilfe, Tageszentren, stationäre Pflege).",
+    "reason_codes": [
+      "legal_uncertainty",
+      "no_source",
+      "user_stuck",
+      "social_crisis"
+    ],
+    "source_url": "https://www.fsw.at/p/pflege-betreuung"
+  },
+  {
+    "id": "sozialministerium_pflegetelefon",
+    "name": "Sozialministerium – Service für Bürgerinnen und Bürger (Pflegetelefon)",
+    "phone": "0800 201 611",
+    "url": "https://www.sozialministerium.at",
+    "hours": "Mo-Fr 08:00-16:00 Uhr",
+    "note": "Kostenlose österreichweite Information und Beratung für pflegende Angehörige (Pflegekarenz, 24-Stunden-Betreuung, finanzielle Hilfen).",
+    "reason_codes": [
+      "legal_uncertainty",
+      "no_source",
+      "user_stuck",
+      "social_crisis"
+    ],
+    "source_url": "https://www.sozialministerium.gv.at/Services/Service-fuer-Buergerinnen-und-Buerger.html"
+  }
+]

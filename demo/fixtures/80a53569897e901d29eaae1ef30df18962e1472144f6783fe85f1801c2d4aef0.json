@@ -1,0 +1,903 @@
+{
+  "request_sha256": "80a53569897e901d29eaae1ef30df18962e1472144f6783fe85f1801c2d4aef0",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "text",
+      "text": "Das",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " kann ich nicht",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " beurteilen oder",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " empfehlen",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ". Eine D",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "osisänder",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ung entscheidet",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Ihre",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " beh",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "andelnde Är",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ztin oder",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " der",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Arzt",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ".\n\nWe",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "il Sie",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " schreiben",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ", dass ihr",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " noch immer schlecht",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " ist, empfe",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "hle ich einen",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " zeit",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "nahen Kontakt",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " zum",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " beh",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "andelnden on",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "kologischen Team",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " bzw",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ". der",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Hausärztin",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ". Nach",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ts",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " oder",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " außerhalb der Ord",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "inationszeiten hilft",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " die telefonische",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Gesundheitsberatung unter",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " **14",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "50**.",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "\n\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": "chatcmpl-tool-9a81942ef87786a6",
+        "name": "escalate",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"reason_code\": \"medical"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "_question"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"target_kind\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "health"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "_advice"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"open_question\": \""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "Die Patient"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "in ist"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " an"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "haltend ü"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "bel;"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " die Ange"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "hörige fragt"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ","
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " ob das"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Ondanset"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ron höher dos"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "iert werden soll"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": ". Bitte"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " um är"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ztliche Einsch"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ätzung zur"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": " Medik"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "ation."
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\"}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 14683,
+        "completion_tokens": 177,
+        "cached_tokens": 7936
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 14683,
+        "completion_tokens": 177,
+        "cached_tokens": 7936
+      },
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9a81942ef87786a6",
+          "name": "escalate",
+          "arguments": {
+            "reason_code": "medical_question",
+            "target_kind": "health_advice",
+            "open_question": "Die Patientin ist anhaltend übel; die Angehörige fragt, ob das Ondansetron höher dosiert werden soll. Bitte um ärztliche Einschätzung zur Medikation."
+          },
+          "raw_arguments": "{\"reason_code\": \"medical_question\", \"target_kind\": \"health_advice\", \"open_question\": \"Die Patientin ist anhaltend übel; die Angehörige fragt, ob das Ondansetron höher dosiert werden soll. Bitte um ärztliche Einschätzung zur Medikation.\"}",
+          "parse_error": null
+        }
+      ],
+      "model": "eustella-v1.5",
+      "request_id": "req_95a179099e45208892c5722c",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "15179",
+        "x-ratelimit-remaining-requests": "18",
+        "x-ratelimit-remaining-tokens": "46793",
+        "x-ratelimit-reset-output-tokens": "1s",
+        "x-ratelimit-reset-requests": "5s",
+        "x-ratelimit-reset-tokens": "31s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+/*
+ * Design tokens — SV KI-Lotse, direction „Atmosphäre" (docs/DESIGN.md).
+ * This file is the only place for colour, type, spacing, radius, shadow and motion values.
+ * Components use the Tailwind utilities generated from @theme below, never raw values.
+ * Two themes: light (default, for the projector) and dark (`<html data-theme="dark">`).
+ * Contrast pairs for both themes are listed in docs/DESIGN.md §2.
+ */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* `dark:` follows the theme attribute, never the operating system setting. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Neutral (hue 285, cool slate): structure ---------- */
+  --bg-page: oklch(0.972 0.012 285);
+  --bg-surface: oklch(1 0 0);
+  --bg-subtle: oklch(0.955 0.012 285);
+  --bg-muted: oklch(0.93 0.014 285);
+  --border: oklch(0.88 0.015 285);
+  --border-strong: oklch(0.6 0.02 285);
+  --text: oklch(0.22 0.02 285);
+  --text-secondary: oklch(0.45 0.02 285);
+
+  /* ---------- Glass: translucent panes over the atmosphere ---------- */
+  --bg-glass: oklch(1 0 0 / 0.72);
+  --border-glass: oklch(0.22 0.02 285 / 0.08);
+  --blur-glass: 20px;
+
+  /* ---------- Atmosphere: soft light behind everything ---------- */
+  --atmosphere:
+    radial-gradient(64rem 42rem at 50% 115%, oklch(0.92 0.06 350 / 0.8), transparent 70%),
+    radial-gradient(54rem 38rem at 0% 0%, oklch(0.92 0.055 275 / 0.9), transparent 70%),
+    radial-gradient(48rem 34rem at 100% 10%, oklch(0.94 0.05 170 / 0.8), transparent 70%);
+
+  /* ---------- Accent fir green (hue 160): „sicherer Weg" ---------- */
+  --accent-solid: oklch(0.45 0.09 160);
+  --accent-solid-hover: oklch(0.4 0.085 160);
+  --accent-text: oklch(0.42 0.09 160);
+  --accent-subtle: oklch(0.94 0.035 160);
+  --accent-border: oklch(0.8 0.06 160);
+  --on-accent: oklch(1 0 0);
+
+  /* ---------- Ochre (hue 75): „bitte prüfen, Mensch nötig" ---------- */
+  --caution-subtle: oklch(0.96 0.04 85);
+  --caution-border: oklch(0.8 0.1 80);
+  --caution-text: oklch(0.42 0.08 70);
+  --caution-solid: oklch(0.47 0.1 65);
+  --on-caution: oklch(1 0 0);
+
+  /* ---------- Red (hue 25): emergency only ---------- */
+  --emergency-solid: oklch(0.5 0.19 27);
+  --emergency-solid-hover: oklch(0.45 0.18 27);
+  --emergency-subtle: oklch(0.96 0.02 25);
+  --emergency-text: oklch(0.45 0.18 27);
+  --on-emergency: oklch(1 0 0);
+
+  --focus-ring: var(--accent-solid);
+
+  /* ---------- Scrim behind sheets and dialogs: always dims, in both themes ---------- */
+  --scrim: oklch(0.2 0.03 285 / 0.4);
+
+  /* ---------- Radius: panes and cards 16 px, elements in cards 12 px ---------- */
+  --radius: 1rem;
+
+  /* ---------- Shadows: soft, wide depth ---------- */
+  --shadow-card: 0 1px 2px oklch(0.3 0.04 285 / 0.05), 0 8px 24px oklch(0.3 0.04 285 / 0.06);
+  --shadow-overlay: 0 16px 48px oklch(0.25 0.04 285 / 0.18), 0 2px 8px oklch(0.25 0.04 285 / 0.08);
+
+  /* ---------- Layout ---------- */
+  --header-height: 4rem;
+
+  /* ---------- Motion (better-ui values) ---------- */
+  --ease-out-ui: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 150ms;
+  --duration-enter: 300ms;
+
+  /* ---------- Font: system stack until a local font file lands (DESIGN.md §3) ---------- */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Dark theme: deep navy to plum, frosted panes. Same token names, AA contrast kept. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-page: oklch(0.17 0.03 285);
+  --bg-surface: oklch(0.23 0.03 285);
+  --bg-subtle: oklch(0.3 0.03 285 / 0.7);
+  --bg-muted: oklch(0.34 0.03 285);
+  --border: oklch(1 0 0 / 0.12);
+  --border-strong: oklch(0.64 0.025 285);
+  --text: oklch(0.96 0.008 285);
+  --text-secondary: oklch(0.8 0.02 285);
+
+  --bg-glass: oklch(0.26 0.03 285 / 0.62);
+  --border-glass: oklch(1 0 0 / 0.1);
+
+  --atmosphere:
+    radial-gradient(64rem 44rem at 55% 110%, oklch(0.32 0.09 345 / 0.55), transparent 70%),
+    radial-gradient(56rem 40rem at 0% 0%, oklch(0.28 0.09 280 / 0.6), transparent 70%),
+    radial-gradient(50rem 36rem at 100% 0%, oklch(0.25 0.07 265 / 0.55), transparent 70%);
+
+  --accent-solid: oklch(0.76 0.13 160);
+  --accent-solid-hover: oklch(0.82 0.12 160);
+  --accent-text: oklch(0.82 0.11 160);
+  --accent-subtle: oklch(0.33 0.06 160 / 0.75);
+  --accent-border: oklch(0.55 0.08 160);
+  --on-accent: oklch(0.2 0.04 160);
+
+  --caution-subtle: oklch(0.33 0.05 75 / 0.75);
+  --caution-border: oklch(0.6 0.1 75);
+  --caution-text: oklch(0.86 0.1 85);
+  --caution-solid: oklch(0.78 0.12 80);
+  --on-caution: oklch(0.22 0.04 75);
+
+  --emergency-solid: oklch(0.56 0.2 27);
+  --emergency-solid-hover: oklch(0.52 0.2 27);
+  --emergency-subtle: oklch(0.3 0.07 25 / 0.75);
+  --emergency-text: oklch(0.8 0.12 25);
+  --on-emergency: oklch(1 0 0);
+
+  --scrim: oklch(0.08 0.02 285 / 0.6);
+
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.3), 0 8px 24px oklch(0 0 0 / 0.25);
+  --shadow-overlay: 0 16px 48px oklch(0 0 0 / 0.5), 0 2px 8px oklch(0 0 0 / 0.3);
+}
+
+/*
+ * Tailwind theme. The shadcn/ui names (primary, muted, …) map onto the semantic tokens,
+ * so the generated components follow the design without per-component colours.
+ */
+@theme inline {
+  /* Semantic tokens */
+  --color-page: var(--bg-page);
+  --color-glass: var(--bg-glass);
+  --color-border-glass: var(--border-glass);
+  --color-scrim: var(--scrim);
+  --color-surface: var(--bg-surface);
+  --color-subtle: var(--bg-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-solid: var(--accent-solid);
+  --color-accent-solid-hover: var(--accent-solid-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-border: var(--accent-border);
+  --color-on-accent: var(--on-accent);
+  --color-caution-subtle: var(--caution-subtle);
+  --color-caution-border: var(--caution-border);
+  --color-caution-text: var(--caution-text);
+  --color-caution-solid: var(--caution-solid);
+  --color-on-caution: var(--on-caution);
+  --color-emergency-solid: var(--emergency-solid);
+  --color-emergency-solid-hover: var(--emergency-solid-hover);
+  --color-emergency-subtle: var(--emergency-subtle);
+  --color-emergency-text: var(--emergency-text);
+  --color-on-emergency: var(--on-emergency);
+
+  /* shadcn/ui aliases */
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text);
+  --color-card: var(--bg-surface);
+  --color-card-foreground: var(--text);
+  --color-popover: var(--bg-surface);
+  --color-popover-foreground: var(--text);
+  --color-primary: var(--accent-solid);
+  --color-primary-foreground: var(--on-accent);
+  --color-secondary: var(--bg-subtle);
+  --color-secondary-foreground: var(--text);
+  --color-muted: var(--bg-muted);
+  --color-muted-foreground: var(--text-secondary);
+  --color-accent: var(--bg-muted);
+  --color-accent-foreground: var(--text);
+  --color-destructive: var(--emergency-solid);
+  --color-border: var(--border);
+  --color-input: var(--border-strong);
+  --color-ring: var(--focus-ring);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Shadows */
+  --shadow-card: var(--shadow-card);
+  --shadow-overlay: var(--shadow-overlay);
+
+  /* Font */
+  --font-sans: var(--font-ui);
+
+  /* Type scale (DESIGN.md §3). Use text-display … text-caption. */
+  --text-display: 2.75rem;
+  --text-display--line-height: 1.1;
+  --text-display--font-weight: 600;
+  --text-title: 1.5rem;
+  --text-title--line-height: 1.25;
+  --text-title--font-weight: 600;
+  --text-heading: 1.125rem;
+  --text-heading--line-height: 1.3;
+  --text-heading--font-weight: 600;
+  --text-answer: 1.125rem;
+  --text-answer--line-height: 1.6;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-label: 0.875rem;
+  --text-label--line-height: 1.4;
+  --text-label--font-weight: 600;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+
+  /* Breakpoints for the demo screens (DESIGN.md §5): lg 1024 px is the Tailwind default. */
+  --breakpoint-laptop: 90rem;
+  --breakpoint-beamer: 120rem;
+
+  /* Column widths of the app shell */
+  --spacing-nav: 16rem;
+  --spacing-nav-beamer: 17.5rem;
+  --spacing-case: 20rem;
+  --spacing-case-laptop: 22.5rem;
+  --spacing-case-beamer: 27.5rem;
+
+  /* Widths */
+  --container-answer: 68ch;
+  --container-content: 72rem;
+
+  /* Motion */
+  --ease-out-ui: var(--ease-out-ui);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-page font-sans text-body text-text antialiased;
+    background-image: var(--atmosphere);
+    background-attachment: fixed;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Visible focus everywhere. Components may add their own ring on top. */
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--accent-subtle);
+    color: var(--text);
+  }
+
+  button,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scroll areas: content fades out at the top and bottom edge instead of a hard cut. */
+@utility fade-y {
+  mask-image: linear-gradient(to bottom, transparent, black 1.5rem, black calc(100% - 1.5rem), transparent);
+}
+
+/* Frosted pane: translucent surface, blur and a fine edge. */
+@utility glass {
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  -webkit-backdrop-filter: blur(var(--blur-glass)) saturate(1.3);
+  backdrop-filter: blur(var(--blur-glass)) saturate(1.3);
+}
+
+/* The theme switch sets this class for one frame so colours swap without a smear. */
+.theme-switching,
+.theme-switching * {
+  transition: none !important;
+}
+
+/* Reduced motion: keep opacity fades, drop movement (better-accessibility). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

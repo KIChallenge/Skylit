@@ -1,0 +1,12 @@
+[
+  {"persona_id": "maria", "kind": "appointment", "title": "Kontrolle Hausärztin – Demo-Ordination Dr. Nora Wolkenfeld", "days_from_seed": 2, "time": "09:30", "minutes": 30, "location": "Demogasse 1, 1030 Wien", "note": "Medikamentenliste der Mutter mitnehmen."},
+  {"persona_id": "maria", "kind": "deadline", "title": "Pflegegeldantrag absenden", "days_from_seed": 6, "all_day": true, "note": "Unterlagen: Befunde, Pflegetagebuch."},
+  {"persona_id": "maria", "kind": "appointment", "title": "Pflegeberatung – Demo-Pflegeberatung Morgenblatt", "days_from_seed": 9, "time": "14:00", "minutes": 60, "location": "Demogasse 2, 1030 Wien"},
+  {"persona_id": "maria", "kind": "other", "title": "Rückruf Mobilpflege Sonnenanker", "days_from_seed": 13, "time": "10:00", "minutes": 15},
+  {"persona_id": "stefan", "kind": "appointment", "title": "Vorsorgeuntersuchung – Demo-Ordination Dr. Emil Kieselstern", "days_from_seed": 3, "time": "08:15", "minutes": 20, "location": "Beispielgasse 1, 1100 Wien", "note": "Nüchtern erscheinen, wenn die Ordination das verlangt."},
+  {"persona_id": "stefan", "kind": "other", "title": "Befunde der Vorsorgeuntersuchung besprechen", "days_from_seed": 10, "time": "17:00", "minutes": 20},
+  {"persona_id": "stefan", "kind": "appointment", "title": "Physiotherapie – Demo-Therapiezentrum Regenbogenpfad", "days_from_seed": 12, "time": "16:30", "minutes": 45, "location": "Beispielgasse 4, 1100 Wien"},
+  {"persona_id": "elif", "kind": "appointment", "title": "Untersuchung laut Eltern-Kind-Pass – Demo-Ordination Dr. Livia Federbach", "days_from_seed": 4, "time": "11:00", "minutes": 30, "location": "Mustergasse 1, 1160 Wien"},
+  {"persona_id": "elif", "kind": "deadline", "title": "Rückmeldung an die ÖGK senden", "days_from_seed": 8, "all_day": true},
+  {"persona_id": "elif", "kind": "other", "title": "Ergotherapie-Erstgespräch vorbereiten", "days_from_seed": 15, "time": "09:00", "minutes": 30}
+]

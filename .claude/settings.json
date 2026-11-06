@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hackkit task:*)",
+      "Bash(hackkit pr list:*)",
+      "Bash(hackkit pr show:*)",
+      "Bash(hackkit manager show:*)",
+      "Bash(hackkit manager update:*)",
+      "Bash(hackkit quota:*)",
+      "Bash(hackkit ask:*)",
+      "Bash(hackkit status:*)",
+      "Bash(hackkit check:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "mcp__context7",
+      "mcp__playwright",
+      "mcp__shadcn"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

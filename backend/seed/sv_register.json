@@ -1,0 +1,55 @@
+{
+  "_comment": "Synthetic SV register for the simulated SV data query (D-041). Every SV-Nummer, name and address is invented. The numbers pass the check digit only so the format looks right.",
+  "1234020674": {
+    "synthetic": true,
+    "first_name": "Maria",
+    "last_name": "Berger",
+    "date_of_birth": "1974-06-02",
+    "address": {
+      "street": "Demogasse 7",
+      "postal_code": "1030",
+      "city": "Wien",
+      "bundesland": "Wien"
+    },
+    "insurer": "OEGK",
+    "insurance_status": "Pflichtversichert (Angestellte)",
+    "co_insured": []
+  },
+  "4564200188": {
+    "synthetic": true,
+    "first_name": "Stefan",
+    "last_name": "Gruber",
+    "date_of_birth": "1988-01-20",
+    "address": {
+      "street": "Beispielgasse 15",
+      "postal_code": "1100",
+      "city": "Wien",
+      "bundesland": "Wien"
+    },
+    "insurer": "SVS",
+    "insurance_status": "Selbstständig (SVS)",
+    "co_insured": []
+  },
+  "7898110995": {
+    "synthetic": true,
+    "first_name": "Elif",
+    "last_name": "Yılmaz",
+    "date_of_birth": "1995-09-11",
+    "address": {
+      "street": "Mustergasse 3",
+      "postal_code": "1160",
+      "city": "Wien",
+      "bundesland": "Wien"
+    },
+    "insurer": "OEGK",
+    "insurance_status": "Pflichtversichert (Angestellte)",
+    "co_insured": [
+      {
+        "first_name": "Deniz",
+        "last_name": "Yılmaz",
+        "date_of_birth": "2024-03-18",
+        "relation": "Kind"
+      }
+    ]
+  }
+}

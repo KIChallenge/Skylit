@@ -1,0 +1,12 @@
+# Seeded by hackkit. gitleaks reads it from the repo root, in the pre-commit hook and in `hackkit check`.
+# Add your own allowlists below. Keep `useDefault`, or gitleaks drops its built-in rules.
+[extend]
+useDefault = true
+
+# .hackkit/lock.json maps file paths to SHA-256 hashes. A path such as `token-naming.md`
+# next to a hash looks like an API key to the `generic-api-key` rule.
+[[allowlists]]
+description = "hackkit lock file: SHA-256 hashes"
+condition = "AND"
+paths = ['''^\.hackkit/lock\.json$''']
+regexes = ['''^[0-9a-f]{64}$''']

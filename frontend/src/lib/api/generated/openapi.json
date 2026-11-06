@@ -1,0 +1,4077 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SV KI-Lotse API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/personas": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "List Personas",
+        "operationId": "list_personas_api_personas_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Persona"
+                  },
+                  "type": "array",
+                  "title": "Response List Personas Api Personas Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Logout",
+        "operationId": "logout_api_auth_logout_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/me": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Read Me",
+        "operationId": "read_me_api_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/me/profile": {
+      "patch": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Update Profile",
+        "operationId": "update_profile_api_me_profile_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/conversations": {
+      "get": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "List Conversations",
+        "operationId": "list_conversations_api_conversations_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ConversationSummary"
+                  },
+                  "type": "array",
+                  "title": "Response List Conversations Api Conversations Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Create Conversation",
+        "operationId": "create_conversation_api_conversations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ConversationCreate"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Conversation"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/conversations/{conversation_id}": {
+      "get": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Read Conversation",
+        "operationId": "read_conversation_api_conversations__conversation_id__get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Conversation"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Delete Conversation",
+        "operationId": "delete_conversation_api_conversations__conversation_id__delete",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/conversations/{conversation_id}/case": {
+      "get": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Read Case",
+        "operationId": "read_case_api_conversations__conversation_id__case_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Case"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/case-steps/{step_id}": {
+      "patch": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Update Case Step",
+        "operationId": "update_case_step_api_case_steps__step_id__patch",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "step_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Step Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseStepUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseStep"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/reset": {
+      "post": {
+        "tags": [
+          "dev"
+        ],
+        "summary": "Reset",
+        "description": "Wipe the current persona's demo data. Other personas keep theirs.",
+        "operationId": "reset_api_dev_reset_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/conversations/{conversation_id}/messages": {
+      "post": {
+        "tags": [
+          "conversations"
+        ],
+        "summary": "Post Message",
+        "operationId": "post_message_api_conversations__conversation_id__messages_post",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/event-stream": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/_schema/events": {
+      "get": {
+        "tags": [
+          "schema"
+        ],
+        "summary": "SSE event types (schema only)",
+        "description": "The frontend generates its event types from this response model.\n\nThe stream itself is POST /api/conversations/{id}/messages.",
+        "operationId": "event_schema_api__schema_events_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/MessageCreated"
+                    },
+                    {
+                      "$ref": "#/components/schemas/EmergencyEvent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StatusEvent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/TextDelta"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ToolCalled"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ToolResult"
+                    },
+                    {
+                      "$ref": "#/components/schemas/CaseUpdated"
+                    },
+                    {
+                      "$ref": "#/components/schemas/EscalationEvent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SourcesEvent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MessageCompleted"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorEvent"
+                    }
+                  ],
+                  "title": "Response Event Schema Api  Schema Events Get",
+                  "discriminator": {
+                    "propertyName": "type",
+                    "mapping": {
+                      "message.created": "#/components/schemas/MessageCreated",
+                      "emergency": "#/components/schemas/EmergencyEvent",
+                      "status": "#/components/schemas/StatusEvent",
+                      "text.delta": "#/components/schemas/TextDelta",
+                      "tool.called": "#/components/schemas/ToolCalled",
+                      "tool.result": "#/components/schemas/ToolResult",
+                      "case.updated": "#/components/schemas/CaseUpdated",
+                      "escalation": "#/components/schemas/EscalationEvent",
+                      "sources": "#/components/schemas/SourcesEvent",
+                      "message.completed": "#/components/schemas/MessageCompleted",
+                      "error": "#/components/schemas/ErrorEvent"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/form-drafts/{id}": {
+      "get": {
+        "tags": [
+          "form-drafts"
+        ],
+        "summary": "Read Form Draft",
+        "operationId": "read_form_draft_api_form_drafts__id__get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDraft"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/form-drafts/{id}/pdf": {
+      "get": {
+        "tags": [
+          "form-drafts"
+        ],
+        "summary": "Download Form Draft",
+        "operationId": "download_form_draft_api_form_drafts__id__pdf_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/escalations/{id}": {
+      "get": {
+        "tags": [
+          "escalations"
+        ],
+        "summary": "Read Escalation",
+        "operationId": "read_escalation_api_escalations__id__get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Escalation"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents": {
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Upload Document",
+        "operationId": "upload_document_api_documents_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_document_api_documents_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/documents/{id}": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Read Document",
+        "operationId": "read_document_api_documents__id__get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{id}/file": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Download Document",
+        "operationId": "download_document_api_documents__id__file_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/appointments/{id}/ics": {
+      "get": {
+        "tags": [
+          "appointments"
+        ],
+        "summary": "Download Appointment",
+        "operationId": "download_appointment_api_appointments__id__ics_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/calendar": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/calendar-entries": {
+      "get": {
+        "tags": [
+          "calendar"
+        ],
+        "summary": "List Entries",
+        "operationId": "list_entries_api_calendar_entries_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/CalendarEntry"
+                  },
+                  "type": "array",
+                  "title": "Response List Entries Api Calendar Entries Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "calendar"
+        ],
+        "summary": "Create Entry",
+        "operationId": "create_entry_api_calendar_entries_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalendarEntryCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalendarEntry"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ]
+      }
+    },
+    "/api/calendar-entries/{id}": {
+      "delete": {
+        "tags": [
+          "calendar"
+        ],
+        "summary": "Delete Entry",
+        "operationId": "delete_entry_api_calendar_entries__id__delete",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{id}/audit": {
+      "get": {
+        "tags": [
+          "transparency"
+        ],
+        "summary": "Read Audit",
+        "operationId": "read_audit_api_messages__id__audit_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AuditEntry"
+                  },
+                  "title": "Response Read Audit Api Messages  Id  Audit Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{id}/transparency": {
+      "get": {
+        "tags": [
+          "transparency"
+        ],
+        "summary": "Read Transparency",
+        "operationId": "read_transparency_api_messages__id__transparency_get",
+        "security": [
+          {
+            "APIKeyCookie": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageTransparency"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Appointment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/Provider"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "title": "End"
+          },
+          "ics_url": {
+            "type": "string",
+            "title": "Ics Url"
+          },
+          "demo": {
+            "type": "boolean",
+            "const": true,
+            "title": "Demo",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "provider",
+          "start",
+          "end",
+          "ics_url"
+        ],
+        "title": "Appointment"
+      },
+      "AppointmentCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "appointment",
+            "title": "Type",
+            "default": "appointment"
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "demo": {
+            "type": "boolean",
+            "const": true,
+            "title": "Demo",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "appointment"
+        ],
+        "title": "AppointmentCard"
+      },
+      "AuditEntry": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "llm_call",
+              "tool_call",
+              "retrieval",
+              "guardrail",
+              "escalation",
+              "error"
+            ],
+            "title": "Event Type"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "detail": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "event_type",
+          "summary",
+          "detail"
+        ],
+        "title": "AuditEntry"
+      },
+      "Body_upload_document_api_documents_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          },
+          "conversation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversation Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_document_api_documents_post"
+      },
+      "CalendarEntry": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "appointment",
+              "deadline",
+              "other"
+            ],
+            "title": "Kind"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start"
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End"
+          },
+          "all_day": {
+            "type": "boolean",
+            "title": "All Day",
+            "default": false
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "conversation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversation Id"
+          },
+          "appointment_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Appointment Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "start"
+        ],
+        "title": "CalendarEntry"
+      },
+      "CalendarEntryCreate": {
+        "properties": {
+          "appointment_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Appointment Id"
+          },
+          "conversation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversation Id"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "appointment",
+              "deadline",
+              "other"
+            ],
+            "title": "Kind",
+            "default": "other"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          },
+          "start": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start"
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End"
+          },
+          "all_day": {
+            "type": "boolean",
+            "title": "All Day",
+            "default": false
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "CalendarEntryCreate",
+        "description": "Either `appointment_id` alone, or a manual entry with `title` and `start`."
+      },
+      "Case": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subject": {
+            "type": "string",
+            "enum": [
+              "self",
+              "parent",
+              "child",
+              "partner",
+              "other"
+            ],
+            "title": "Subject"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/CaseStep"
+            },
+            "type": "array",
+            "title": "Steps"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "subject",
+          "summary",
+          "steps",
+          "updated_at"
+        ],
+        "title": "Case"
+      },
+      "CaseStep": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "in_progress",
+              "done",
+              "blocked"
+            ],
+            "title": "Status"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "info",
+              "form",
+              "document",
+              "appointment",
+              "contact",
+              "escalation"
+            ],
+            "title": "Category"
+          },
+          "leistung_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Leistung Id"
+          },
+          "due_hint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Due Hint"
+          },
+          "related_card": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/FormDraftCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OfficeCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ProviderListCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AppointmentCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/EmailDraftCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/EscalationCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/DocumentSummaryCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/LeistungCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/SamplerQuestionCard"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "type",
+                  "mapping": {
+                    "appointment": "#/components/schemas/AppointmentCard",
+                    "document_summary": "#/components/schemas/DocumentSummaryCard",
+                    "email_draft": "#/components/schemas/EmailDraftCard",
+                    "escalation": "#/components/schemas/EscalationCard",
+                    "form_draft": "#/components/schemas/FormDraftCard",
+                    "leistung": "#/components/schemas/LeistungCard",
+                    "office": "#/components/schemas/OfficeCard",
+                    "provider_list": "#/components/schemas/ProviderListCard",
+                    "sampler_question": "#/components/schemas/SamplerQuestionCard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Related Card"
+          },
+          "position": {
+            "type": "integer",
+            "title": "Position"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "description",
+          "status",
+          "category",
+          "position"
+        ],
+        "title": "CaseStep"
+      },
+      "CaseStepUpdate": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "in_progress",
+              "done",
+              "blocked"
+            ],
+            "title": "Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "CaseStepUpdate"
+      },
+      "CaseUpdated": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "case.updated",
+            "title": "Type",
+            "default": "case.updated"
+          },
+          "case": {
+            "$ref": "#/components/schemas/Case"
+          }
+        },
+        "type": "object",
+        "required": [
+          "case"
+        ],
+        "title": "CaseUpdated"
+      },
+      "CoInsuredPerson": {
+        "properties": {
+          "first_name": {
+            "type": "string",
+            "title": "First Name"
+          },
+          "last_name": {
+            "type": "string",
+            "title": "Last Name"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date",
+            "title": "Date Of Birth"
+          },
+          "relation": {
+            "type": "string",
+            "title": "Relation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "first_name",
+          "last_name",
+          "date_of_birth",
+          "relation"
+        ],
+        "title": "CoInsuredPerson"
+      },
+      "Confidence": {
+        "properties": {
+          "level": {
+            "type": "string",
+            "enum": [
+              "hoch",
+              "mittel",
+              "niedrig"
+            ],
+            "title": "Level"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "level",
+          "reason"
+        ],
+        "title": "Confidence"
+      },
+      "Contact": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "hours": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hours"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Contact"
+      },
+      "Conversation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "messages": {
+            "items": {
+              "$ref": "#/components/schemas/Message"
+            },
+            "type": "array",
+            "title": "Messages"
+          },
+          "case": {
+            "$ref": "#/components/schemas/Case"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "created_at",
+          "updated_at",
+          "messages",
+          "case"
+        ],
+        "title": "Conversation"
+      },
+      "ConversationCreate": {
+        "properties": {
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ConversationCreate"
+      },
+      "ConversationSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "open_steps": {
+            "type": "integer",
+            "title": "Open Steps"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "updated_at",
+          "open_steps"
+        ],
+        "title": "ConversationSummary"
+      },
+      "Document": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename"
+          },
+          "mime_type": {
+            "type": "string",
+            "title": "Mime Type"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "processing",
+              "ready",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "kind": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "discharge_letter",
+                  "finding",
+                  "vaccination_record",
+                  "notice",
+                  "other"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Kind"
+          },
+          "extracted": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DocumentExtraction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "filename",
+          "mime_type",
+          "status",
+          "kind",
+          "extracted",
+          "created_at"
+        ],
+        "title": "Document"
+      },
+      "DocumentExtraction": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "discharge_letter",
+              "finding",
+              "vaccination_record",
+              "notice",
+              "other"
+            ],
+            "title": "Kind"
+          },
+          "issuer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Issuer"
+          },
+          "document_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document Date"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/ExtractedPatient"
+          },
+          "living_situation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Living Situation"
+          },
+          "documented_recommendations": {
+            "items": {
+              "$ref": "#/components/schemas/DocumentedRecommendation"
+            },
+            "type": "array",
+            "title": "Documented Recommendations"
+          },
+          "follow_up_appointments": {
+            "items": {
+              "$ref": "#/components/schemas/FollowUpAppointment"
+            },
+            "type": "array",
+            "title": "Follow Up Appointments"
+          },
+          "warnings_in_document": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings In Document"
+          },
+          "confidence_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confidence Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "issuer",
+          "document_date",
+          "patient",
+          "living_situation",
+          "documented_recommendations",
+          "follow_up_appointments",
+          "warnings_in_document",
+          "confidence_note"
+        ],
+        "title": "DocumentExtraction"
+      },
+      "DocumentSummaryCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "document_summary",
+            "title": "Type",
+            "default": "document_summary"
+          },
+          "document_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Document Id"
+          },
+          "extraction": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Extraction"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_id",
+          "extraction"
+        ],
+        "title": "DocumentSummaryCard"
+      },
+      "DocumentedRecommendation": {
+        "properties": {
+          "topic": {
+            "type": "string",
+            "enum": [
+              "rehabilitation",
+              "care_allowance",
+              "mobile_care",
+              "follow_up",
+              "aids",
+              "transport",
+              "prescription_fee_exemption",
+              "nutrition",
+              "social_services",
+              "other"
+            ],
+            "title": "Topic"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "topic",
+          "quote",
+          "section"
+        ],
+        "title": "DocumentedRecommendation"
+      },
+      "EmailDraft": {
+        "properties": {
+          "to_label": {
+            "type": "string",
+            "title": "To Label"
+          },
+          "to_email": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "To Email"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          }
+        },
+        "type": "object",
+        "required": [
+          "to_label",
+          "subject",
+          "body"
+        ],
+        "title": "EmailDraft"
+      },
+      "EmailDraftCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "email_draft",
+            "title": "Type",
+            "default": "email_draft"
+          },
+          "email": {
+            "$ref": "#/components/schemas/EmailDraft"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email"
+        ],
+        "title": "EmailDraftCard"
+      },
+      "EmergencyEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "emergency",
+            "title": "Type",
+            "default": "emergency"
+          },
+          "contacts": {
+            "items": {
+              "$ref": "#/components/schemas/Contact"
+            },
+            "type": "array",
+            "title": "Contacts"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "contacts",
+          "message"
+        ],
+        "title": "EmergencyEvent"
+      },
+      "ErrorEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "error",
+            "title": "Type",
+            "default": "error"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "retry_after": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retry After"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorEvent"
+      },
+      "Escalation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "reason_code": {
+            "type": "string",
+            "enum": [
+              "emergency",
+              "medical_question",
+              "legal_uncertainty",
+              "no_source",
+              "user_stuck",
+              "social_crisis"
+            ],
+            "title": "Reason Code"
+          },
+          "target": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "handover_summary": {
+            "type": "string",
+            "title": "Handover Summary"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "reason_code",
+          "target",
+          "handover_summary",
+          "created_at"
+        ],
+        "title": "Escalation"
+      },
+      "EscalationCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "escalation",
+            "title": "Type",
+            "default": "escalation"
+          },
+          "escalation": {
+            "$ref": "#/components/schemas/Escalation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "escalation"
+        ],
+        "title": "EscalationCard"
+      },
+      "EscalationEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "escalation",
+            "title": "Type",
+            "default": "escalation"
+          },
+          "escalation": {
+            "$ref": "#/components/schemas/Escalation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "escalation"
+        ],
+        "title": "EscalationEvent"
+      },
+      "EscalationInfo": {
+        "properties": {
+          "reason_code": {
+            "type": "string",
+            "title": "Reason Code"
+          },
+          "target": {
+            "$ref": "#/components/schemas/Contact"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reason_code",
+          "target"
+        ],
+        "title": "EscalationInfo"
+      },
+      "ExtractedPatient": {
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "date_of_birth": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date Of Birth"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "postal_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Postal Code"
+          },
+          "insurer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Insurer"
+          },
+          "svnr": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Svnr"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "date_of_birth",
+          "address",
+          "postal_code",
+          "insurer",
+          "svnr"
+        ],
+        "title": "ExtractedPatient"
+      },
+      "FieldSpec": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "hint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hint"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "label"
+        ],
+        "title": "FieldSpec"
+      },
+      "FieldValue": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "conversation",
+              "document",
+              "profile"
+            ],
+            "title": "Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "label",
+          "value",
+          "source"
+        ],
+        "title": "FieldValue"
+      },
+      "FollowUpAppointment": {
+        "properties": {
+          "what": {
+            "type": "string",
+            "title": "What"
+          },
+          "when": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "When"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "what",
+          "when",
+          "quote"
+        ],
+        "title": "FollowUpAppointment"
+      },
+      "FormDraft": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "form_id": {
+            "type": "string",
+            "title": "Form Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "filled": {
+            "items": {
+              "$ref": "#/components/schemas/FieldValue"
+            },
+            "type": "array",
+            "title": "Filled"
+          },
+          "missing": {
+            "items": {
+              "$ref": "#/components/schemas/FieldSpec"
+            },
+            "type": "array",
+            "title": "Missing"
+          },
+          "to_be_filled_by_others": {
+            "items": {
+              "$ref": "#/components/schemas/FieldSpec"
+            },
+            "type": "array",
+            "title": "To Be Filled By Others"
+          },
+          "pdf_url": {
+            "type": "string",
+            "title": "Pdf Url"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "form_id",
+          "title",
+          "filled",
+          "missing",
+          "to_be_filled_by_others",
+          "pdf_url",
+          "created_at"
+        ],
+        "title": "FormDraft"
+      },
+      "FormDraftCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "form_draft",
+            "title": "Type",
+            "default": "form_draft"
+          },
+          "form_draft": {
+            "$ref": "#/components/schemas/FormDraft"
+          }
+        },
+        "type": "object",
+        "required": [
+          "form_draft"
+        ],
+        "title": "FormDraftCard"
+      },
+      "GeoLocation": {
+        "properties": {
+          "lat": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Lon"
+          }
+        },
+        "type": "object",
+        "required": [
+          "lat",
+          "lon"
+        ],
+        "title": "GeoLocation",
+        "description": "Browser location for distance ranking. Used in this turn only, never stored."
+      },
+      "GuardrailInfo": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "summary"
+        ],
+        "title": "GuardrailInfo"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status",
+            "default": "ok"
+          },
+          "db": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "down"
+            ],
+            "title": "Db"
+          },
+          "llm_provider": {
+            "type": "string",
+            "enum": [
+              "eustella",
+              "azure",
+              "fake",
+              "replay"
+            ],
+            "title": "Llm Provider"
+          },
+          "embedder": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "loading",
+              "not_loaded"
+            ],
+            "title": "Embedder",
+            "default": "not_loaded"
+          },
+          "kb_chunks": {
+            "type": "integer",
+            "title": "Kb Chunks",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "db",
+          "llm_provider"
+        ],
+        "title": "HealthResponse"
+      },
+      "LeistungCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "leistung",
+            "title": "Type",
+            "default": "leistung"
+          },
+          "leistung": {
+            "$ref": "#/components/schemas/LeistungInfo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "leistung"
+        ],
+        "title": "LeistungCard"
+      },
+      "LeistungInfo": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "short": {
+            "type": "string",
+            "title": "Short"
+          },
+          "conditions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Conditions"
+          },
+          "office_hint": {
+            "type": "string",
+            "title": "Office Hint"
+          },
+          "form_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Form Ids"
+          },
+          "documents_needed": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Documents Needed"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "short",
+          "conditions",
+          "office_hint",
+          "form_ids",
+          "documents_needed",
+          "source"
+        ],
+        "title": "LeistungInfo"
+      },
+      "LoginRequest": {
+        "properties": {
+          "persona_id": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Persona Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "persona_id"
+        ],
+        "title": "LoginRequest"
+      },
+      "Me": {
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "User Id"
+          },
+          "persona_id": {
+            "type": "string",
+            "title": "Persona Id"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/Profile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "user_id",
+          "persona_id",
+          "display_name",
+          "profile"
+        ],
+        "title": "Me"
+      },
+      "Message": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ],
+            "title": "Role"
+          },
+          "content": {
+            "type": "string",
+            "title": "Content"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "document_ids": {
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "type": "array",
+            "title": "Document Ids"
+          },
+          "cards": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Cards"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "escalation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Escalation Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "role",
+          "content",
+          "created_at",
+          "document_ids",
+          "cards",
+          "sources",
+          "escalation_id"
+        ],
+        "title": "Message"
+      },
+      "MessageCompleted": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "message.completed",
+            "title": "Type",
+            "default": "message.completed"
+          },
+          "message_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Message Id"
+          },
+          "finish_reason": {
+            "type": "string",
+            "title": "Finish Reason"
+          },
+          "usage": {
+            "$ref": "#/components/schemas/Usage"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message_id",
+          "finish_reason",
+          "usage"
+        ],
+        "title": "MessageCompleted"
+      },
+      "MessageCreate": {
+        "properties": {
+          "content": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Content"
+          },
+          "document_ids": {
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "type": "array",
+            "title": "Document Ids"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GeoLocation"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "MessageCreate"
+      },
+      "MessageCreated": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "message.created",
+            "title": "Type",
+            "default": "message.created"
+          },
+          "message_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Message Id"
+          },
+          "conversation_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Conversation Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message_id",
+          "conversation_id"
+        ],
+        "title": "MessageCreated"
+      },
+      "MessageTransparency": {
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Message Id"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "provider": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "tools": {
+            "items": {
+              "$ref": "#/components/schemas/ToolInfo"
+            },
+            "type": "array",
+            "title": "Tools"
+          },
+          "retrieval": {
+            "$ref": "#/components/schemas/RetrievalInfo"
+          },
+          "guardrails": {
+            "items": {
+              "$ref": "#/components/schemas/GuardrailInfo"
+            },
+            "type": "array",
+            "title": "Guardrails"
+          },
+          "escalation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EscalationInfo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "confidence": {
+            "$ref": "#/components/schemas/Confidence"
+          },
+          "entries": {
+            "items": {
+              "$ref": "#/components/schemas/AuditEntry"
+            },
+            "type": "array",
+            "title": "Entries"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message_id",
+          "model",
+          "provider",
+          "sources",
+          "tools",
+          "retrieval",
+          "guardrails",
+          "escalation",
+          "confidence",
+          "entries"
+        ],
+        "title": "MessageTransparency"
+      },
+      "Office": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "organisation": {
+            "type": "string",
+            "title": "Organisation"
+          },
+          "address": {
+            "type": "string",
+            "title": "Address"
+          },
+          "postal_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Postal Code"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Email"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "hours": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hours"
+          },
+          "maps_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maps Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "organisation",
+          "address"
+        ],
+        "title": "Office"
+      },
+      "OfficeCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "office",
+            "title": "Type",
+            "default": "office"
+          },
+          "office": {
+            "$ref": "#/components/schemas/Office"
+          }
+        },
+        "type": "object",
+        "required": [
+          "office"
+        ],
+        "title": "OfficeCard"
+      },
+      "Persona": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "tagline": {
+            "type": "string",
+            "title": "Tagline"
+          },
+          "avatar_emoji": {
+            "type": "string",
+            "title": "Avatar Emoji"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "display_name",
+          "tagline",
+          "avatar_emoji"
+        ],
+        "title": "Persona"
+      },
+      "Profile": {
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "de",
+              "de-simple",
+              "en"
+            ],
+            "title": "Language"
+          },
+          "depth": {
+            "type": "string",
+            "enum": [
+              "short",
+              "detailed"
+            ],
+            "title": "Depth"
+          },
+          "bundesland": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bundesland"
+          },
+          "postal_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Postal Code"
+          },
+          "insurer": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "OEGK",
+                  "BVAEB",
+                  "SVS"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Insurer"
+          },
+          "date_of_birth": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date Of Birth"
+          },
+          "first_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Name"
+          },
+          "last_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Name"
+          },
+          "svnr": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Svnr"
+          },
+          "insurance_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Insurance Status"
+          },
+          "street": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Street"
+          },
+          "city": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "City"
+          },
+          "co_insured": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/CoInsuredPerson"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Co Insured"
+          },
+          "sv_retrieved_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sv Retrieved At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language",
+          "depth",
+          "bundesland",
+          "postal_code",
+          "insurer",
+          "date_of_birth"
+        ],
+        "title": "Profile"
+      },
+      "ProfileUpdate": {
+        "properties": {
+          "language": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "de",
+                  "de-simple",
+                  "en"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          },
+          "depth": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "short",
+                  "detailed"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Depth"
+          },
+          "bundesland": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 40,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bundesland"
+          },
+          "postal_code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Postal Code"
+          },
+          "insurer": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "OEGK",
+                  "BVAEB",
+                  "SVS"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Insurer"
+          },
+          "date_of_birth": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date Of Birth"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ProfileUpdate",
+        "description": "Partial profile: only the fields the client sends change."
+      },
+      "Provider": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "gp",
+              "specialist",
+              "care_counselling",
+              "mobile_care",
+              "therapy",
+              "course"
+            ],
+            "title": "Kind"
+          },
+          "specialty": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Specialty"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "postal_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Postal Code"
+          },
+          "distance_km": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Distance Km"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "website": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Website"
+          },
+          "demo": {
+            "type": "boolean",
+            "title": "Demo",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "kind"
+        ],
+        "title": "Provider"
+      },
+      "ProviderListCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "provider_list",
+            "title": "Type",
+            "default": "provider_list"
+          },
+          "providers": {
+            "items": {
+              "$ref": "#/components/schemas/Provider"
+            },
+            "type": "array",
+            "title": "Providers"
+          },
+          "demo": {
+            "type": "boolean",
+            "title": "Demo",
+            "default": true
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "postal_code",
+              "location"
+            ],
+            "title": "Origin",
+            "default": "postal_code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "providers"
+        ],
+        "title": "ProviderListCard"
+      },
+      "RetrievalChunk": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          }
+        },
+        "type": "object",
+        "required": [
+          "slug",
+          "heading",
+          "score"
+        ],
+        "title": "RetrievalChunk"
+      },
+      "RetrievalInfo": {
+        "properties": {
+          "query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query"
+          },
+          "chunks": {
+            "items": {
+              "$ref": "#/components/schemas/RetrievalChunk"
+            },
+            "type": "array",
+            "title": "Chunks",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "RetrievalInfo"
+      },
+      "SamplerQuestion": {
+        "properties": {
+          "step": {
+            "type": "string",
+            "enum": [
+              "S_O",
+              "S_P",
+              "S_Q",
+              "S_R",
+              "S_S",
+              "S_T",
+              "A",
+              "M",
+              "P",
+              "L",
+              "E",
+              "R"
+            ],
+            "title": "Step"
+          },
+          "step_label": {
+            "type": "string",
+            "title": "Step Label"
+          },
+          "position": {
+            "type": "integer",
+            "title": "Position"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "question": {
+            "type": "string",
+            "title": "Question"
+          },
+          "options": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Options"
+          },
+          "multiple": {
+            "type": "boolean",
+            "title": "Multiple"
+          },
+          "free_text_label": {
+            "type": "string",
+            "title": "Free Text Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "step",
+          "step_label",
+          "position",
+          "total",
+          "question",
+          "options",
+          "multiple",
+          "free_text_label"
+        ],
+        "title": "SamplerQuestion"
+      },
+      "SamplerQuestionCard": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "sampler_question",
+            "title": "Type",
+            "default": "sampler_question"
+          },
+          "question": {
+            "$ref": "#/components/schemas/SamplerQuestion"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question"
+        ],
+        "title": "SamplerQuestionCard"
+      },
+      "Source": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "publisher": {
+            "type": "string",
+            "title": "Publisher"
+          },
+          "retrieved": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retrieved"
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "publisher"
+        ],
+        "title": "Source"
+      },
+      "SourcesEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "sources",
+            "title": "Type",
+            "default": "sources"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "title": "Sources"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sources"
+        ],
+        "title": "SourcesEvent"
+      },
+      "StatusEvent": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "status",
+            "title": "Type",
+            "default": "status"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "retrieving",
+              "thinking",
+              "tool",
+              "writing"
+            ],
+            "title": "Stage"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "stage",
+          "label"
+        ],
+        "title": "StatusEvent"
+      },
+      "TextDelta": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "text.delta",
+            "title": "Type",
+            "default": "text.delta"
+          },
+          "delta": {
+            "type": "string",
+            "title": "Delta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "delta"
+        ],
+        "title": "TextDelta"
+      },
+      "ToolCalled": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "tool.called",
+            "title": "Type",
+            "default": "tool.called"
+          },
+          "call_id": {
+            "type": "string",
+            "title": "Call Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "call_id",
+          "name",
+          "label"
+        ],
+        "title": "ToolCalled"
+      },
+      "ToolInfo": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label",
+          "ok"
+        ],
+        "title": "ToolInfo"
+      },
+      "ToolResult": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "tool.result",
+            "title": "Type",
+            "default": "tool.result"
+          },
+          "call_id": {
+            "type": "string",
+            "title": "Call Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "card": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/FormDraftCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OfficeCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ProviderListCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AppointmentCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/EmailDraftCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/EscalationCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/DocumentSummaryCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/LeistungCard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/SamplerQuestionCard"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "type",
+                  "mapping": {
+                    "appointment": "#/components/schemas/AppointmentCard",
+                    "document_summary": "#/components/schemas/DocumentSummaryCard",
+                    "email_draft": "#/components/schemas/EmailDraftCard",
+                    "escalation": "#/components/schemas/EscalationCard",
+                    "form_draft": "#/components/schemas/FormDraftCard",
+                    "leistung": "#/components/schemas/LeistungCard",
+                    "office": "#/components/schemas/OfficeCard",
+                    "provider_list": "#/components/schemas/ProviderListCard",
+                    "sampler_question": "#/components/schemas/SamplerQuestionCard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Card"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "type": "object",
+        "required": [
+          "call_id",
+          "name",
+          "ok"
+        ],
+        "title": "ToolResult"
+      },
+      "Usage": {
+        "properties": {
+          "prompt_tokens": {
+            "type": "integer",
+            "title": "Prompt Tokens",
+            "default": 0
+          },
+          "completion_tokens": {
+            "type": "integer",
+            "title": "Completion Tokens",
+            "default": 0
+          },
+          "cached_tokens": {
+            "type": "integer",
+            "title": "Cached Tokens",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "title": "Usage"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "lotse_session"
+      }
+    }
+  }
+}

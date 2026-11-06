@@ -1,0 +1,20 @@
+# Dependencies and build output
+/node_modules
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Tests
+/coverage
+/test-results/
+/playwright-report/
+/e2e/screenshots/
+/blob-report/
+
+# Logs
+npm-debug.log*
+
+# Settings live only in the repo-root .env
+.env
+.env.*

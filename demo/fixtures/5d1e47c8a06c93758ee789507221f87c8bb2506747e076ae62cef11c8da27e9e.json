@@ -1,0 +1,211 @@
+{
+  "request_sha256": "5d1e47c8a06c93758ee789507221f87c8bb2506747e076ae62cef11c8da27e9e",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "text",
+      "text": "Ich",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " helfe Ihnen",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ", den",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " nächsten Schritt zu",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " planen",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ". Hat",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Ihre",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Mutter einen Ent",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "lassungsbrief",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " aus dem Sp",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ital?",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " In",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " welchem Bundesland",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " lebt",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " sie?",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 9227,
+        "completion_tokens": 32,
+        "cached_tokens": 9152
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 9227,
+        "completion_tokens": 32,
+        "cached_tokens": 9152
+      },
+      "finish_reason": "stop",
+      "tool_calls": [],
+      "model": "eustella-v1.5",
+      "request_id": "req_3da4b2810a0a723424e0d10a",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "15360",
+        "x-ratelimit-remaining-requests": "19",
+        "x-ratelimit-remaining-tokens": "96000",
+        "x-ratelimit-reset-output-tokens": "0s",
+        "x-ratelimit-reset-requests": "3s",
+        "x-ratelimit-reset-tokens": "0s"
+      }
+    }
+  ]
+}

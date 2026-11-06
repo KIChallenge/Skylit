@@ -1,0 +1,44 @@
+[
+  {
+    "persona_id": "maria",
+    "display_name": "Maria Berger",
+    "tagline": "Pflegt ihre Mutter nach dem Spitalsaufenthalt",
+    "avatar_emoji": "👩",
+    "svnr": "1234020674",
+    "profile": {
+      "language": "de",
+      "depth": "short"
+    },
+    "extra": {
+      "relative": {
+        "name": "Anna Berger",
+        "relation": "mother",
+        "date_of_birth": "1948-03-14",
+        "address": "Musterstraße 12, 1030 Wien",
+        "insurer": "OEGK"
+      }
+    }
+  },
+  {
+    "persona_id": "stefan",
+    "display_name": "Stefan Gruber",
+    "tagline": "Selbstständig, will gesünder leben",
+    "avatar_emoji": "🧑",
+    "svnr": "4564200188",
+    "profile": {
+      "language": "de",
+      "depth": "detailed"
+    }
+  },
+  {
+    "persona_id": "elif",
+    "display_name": "Elif Yılmaz",
+    "tagline": "Mutter eines 2-jährigen Kindes",
+    "avatar_emoji": "👩‍👧",
+    "svnr": "7898110995",
+    "profile": {
+      "language": "en",
+      "depth": "short"
+    }
+  }
+]

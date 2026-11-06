@@ -1,0 +1,74 @@
+[
+  {
+    "id": "demo-gp-1030", "name": "Demo-Ordination Dr. Nora Wolkenfeld",
+    "kind": "gp", "specialty": "Allgemeinmedizin",
+    "address": "Demogasse 1, 1030 Wien", "postal_code": "1030",
+    "lat": 48.197, "lon": 16.399, "phone": "+43 1 000 0001", "demo": true
+  },
+  {
+    "id": "demo-care-counselling-1030", "name": "Demo-Pflegeberatung Morgenblatt",
+    "kind": "care_counselling", "specialty": "Pflegeberatung",
+    "address": "Demogasse 2, 1030 Wien", "postal_code": "1030",
+    "lat": 48.198, "lon": 16.398, "phone": "+43 1 000 0002", "demo": true
+  },
+  {
+    "id": "demo-mobile-care-1030", "name": "Demo-Mobilpflege Sonnenanker",
+    "kind": "mobile_care", "specialty": "Mobile Hauskrankenpflege",
+    "address": "Demogasse 3, 1030 Wien", "postal_code": "1030",
+    "lat": 48.199, "lon": 16.397, "phone": "+43 1 000 0003", "demo": true
+  },
+  {
+    "id": "demo-therapy-1030", "name": "Demo-Therapiezentrum Blütenweg",
+    "kind": "therapy", "specialty": "Physiotherapie",
+    "address": "Demogasse 4, 1030 Wien", "postal_code": "1030",
+    "lat": 48.200, "lon": 16.396, "phone": "+43 1 000 0004", "demo": true
+  },
+  {
+    "id": "demo-gp-1100", "name": "Demo-Ordination Dr. Emil Kieselstern",
+    "kind": "gp", "specialty": "Allgemeinmedizin",
+    "address": "Beispielgasse 1, 1100 Wien", "postal_code": "1100",
+    "lat": 48.173, "lon": 16.378, "phone": "+43 1 000 0005", "demo": true
+  },
+  {
+    "id": "demo-care-counselling-1100", "name": "Demo-Pflegeberatung Abendsonne",
+    "kind": "care_counselling", "specialty": "Pflegeberatung",
+    "address": "Beispielgasse 2, 1100 Wien", "postal_code": "1100",
+    "lat": 48.174, "lon": 16.377, "phone": "+43 1 000 0006", "demo": true
+  },
+  {
+    "id": "demo-mobile-care-1100", "name": "Demo-Mobilpflege Wiesenlicht",
+    "kind": "mobile_care", "specialty": "Mobile Hauskrankenpflege",
+    "address": "Beispielgasse 3, 1100 Wien", "postal_code": "1100",
+    "lat": 48.175, "lon": 16.376, "phone": "+43 1 000 0007", "demo": true
+  },
+  {
+    "id": "demo-therapy-1100", "name": "Demo-Therapiezentrum Regenbogenpfad",
+    "kind": "therapy", "specialty": "Ergotherapie",
+    "address": "Beispielgasse 4, 1100 Wien", "postal_code": "1100",
+    "lat": 48.176, "lon": 16.375, "phone": "+43 1 000 0008", "demo": true
+  },
+  {
+    "id": "demo-gp-1160", "name": "Demo-Ordination Dr. Livia Federbach",
+    "kind": "gp", "specialty": "Allgemeinmedizin",
+    "address": "Mustergasse 1, 1160 Wien", "postal_code": "1160",
+    "lat": 48.212, "lon": 16.319, "phone": "+43 1 000 0009", "demo": true
+  },
+  {
+    "id": "demo-care-counselling-1160", "name": "Demo-Pflegeberatung Waldhafen",
+    "kind": "care_counselling", "specialty": "Pflegeberatung",
+    "address": "Mustergasse 2, 1160 Wien", "postal_code": "1160",
+    "lat": 48.213, "lon": 16.318, "phone": "+43 1 000 0010", "demo": true
+  },
+  {
+    "id": "demo-mobile-care-1160", "name": "Demo-Mobilpflege Sternenwiese",
+    "kind": "mobile_care", "specialty": "Mobile Hauskrankenpflege",
+    "address": "Mustergasse 3, 1160 Wien", "postal_code": "1160",
+    "lat": 48.214, "lon": 16.317, "phone": "+43 1 000 0011", "demo": true
+  },
+  {
+    "id": "demo-therapy-1160", "name": "Demo-Therapiezentrum Kieselgarten",
+    "kind": "therapy", "specialty": "Physiotherapie",
+    "address": "Mustergasse 4, 1160 Wien", "postal_code": "1160",
+    "lat": 48.215, "lon": 16.316, "phone": "+43 1 000 0012", "demo": true
+  }
+]

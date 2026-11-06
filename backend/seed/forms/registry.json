@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pva_pflegegeld",
+    "title": "Antrag auf Pflegegeld",
+    "issuer": "PVA",
+    "file": "forms/pdf/pva_pflegegeld.pdf",
+    "leistung_ids": ["pflegegeld"]
+  },
+  {
+    "id": "kur_reha",
+    "title": "Antrag auf Rehabilitations-, Kur- bzw. Erholungsaufenthalt",
+    "issuer": "DVSV",
+    "file": "forms/pdf/kur_reha.pdf",
+    "leistung_ids": ["rehabilitation", "kur"]
+  },
+  {
+    "id": "fahrtkosten_wien",
+    "title": "Antrag auf Zuschuss zu Fahrtkosten",
+    "issuer": "ÖGK",
+    "file": "forms/pdf/fahrtkosten_wien.pdf",
+    "leistung_ids": ["fahrtkostenzuschuss"]
+  }
+]

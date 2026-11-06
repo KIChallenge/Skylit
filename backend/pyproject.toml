@@ -1,0 +1,36 @@
+[project]
+name = "sv-ki-lotse-backend"
+version = "0.1.0"
+description = "Backend for SV KI-Lotse"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy[asyncio]>=2",
+    "asyncpg",
+    "alembic",
+    "pgvector",
+    "pydantic-settings",
+    "openai",
+    "fastembed",
+    "pymupdf",
+    "pypdf",
+    "python-multipart",
+    "itsdangerous",
+    "httpx",
+    "rapidfuzz>=3.14.6",
+]
+
+[dependency-groups]
+dev = ["pytest", "pytest-asyncio", "ruff", "testcontainers[postgres]"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

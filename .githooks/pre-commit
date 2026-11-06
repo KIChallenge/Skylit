@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Installed by hackkit. Blocks commits that contain secrets.
+# Emergency bypass for a false positive: HACKKIT_SKIP_SECRETS=1 git commit ...
+[ "${HACKKIT_SKIP_SECRETS:-0}" = "1" ] && exit 0
+export PATH="$HOME/.local/bin:$PATH"
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "hackkit: gitleaks is missing, so secrets cannot be checked. Run 'hackkit setup'." >&2
+  exit 1
+fi
+if gitleaks git --help >/dev/null 2>&1; then
+  gitleaks git --pre-commit --staged --redact --no-banner -v
+else
+  gitleaks protect --staged --redact --no-banner -v
+fi
+status=$?
+if [ $status -ne 0 ]; then
+  echo "hackkit: commit blocked — remove the secret above and commit again." >&2
+fi
+exit $status

@@ -1,0 +1,5 @@
+# hackkit repo config. Public repo: no secrets here.
+event = "ki-challenge-2026"
+code_repo = "John2206/ki-challenge-26"
+ops_repo = "John2206/ki-challenge-26-ops"
+setup_command = "make frontend-setup"

@@ -1,0 +1,37 @@
+{
+  "document": "entlassungsbefund.pdf",
+  "patient": {
+    "name": "Anna Berger",
+    "date_of_birth": "14.03.1948",
+    "address": "Musterstraße 12, 1030 Wien",
+    "postal_code": "1030",
+    "insurer": "ÖGK"
+  },
+  "recommendations": [
+    {
+      "topic": "rehabilitation",
+      "quote": "Prüfung einer stationären onkologischen Rehabilitation nach Abschluss der geplanten Strahlentherapie.",
+      "section": "7. Empfehlung zur medizinischen Rehabilitation"
+    },
+    {
+      "topic": "care_allowance",
+      "quote": "Aufgrund des voraussichtlich längerfristigen Unterstützungsbedarfs soll geprüft werden, ob die Voraussetzungen für Pflegegeld erfüllt sind.",
+      "section": "8. Sozialversicherungsrechtliche und soziale Hinweise – Pflegegeld"
+    },
+    {
+      "topic": "mobile_care",
+      "quote": "Mobile Hauskrankenpflege zur Unterstützung bei pflegerischen Aufgaben und zur Beobachtung des Allgemeinzustands.",
+      "section": "6.3 Pflege und Betreuung zu Hause"
+    },
+    {
+      "topic": "prescription_fee_exemption",
+      "quote": "Bei entsprechender finanzieller Situation Information über die Voraussetzungen einer Rezeptgebührenbefreiung.",
+      "section": "8. Sozialversicherungsrechtliche und soziale Hinweise – Heilmittel und Kosten"
+    },
+    {
+      "topic": "transport",
+      "quote": "Prüfung, ob aufgrund des Gesundheitszustands und der geltenden Voraussetzungen eine medizinisch begründete Transportleistung zulasten des zuständigen Kostenträgers in Betracht kommt.",
+      "section": "8. Sozialversicherungsrechtliche und soziale Hinweise – Transport zu Bestrahlungsterminen"
+    }
+  ]
+}

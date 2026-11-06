@@ -1,0 +1,464 @@
+{
+  "insurer.name": {
+    "field": "zuständiger SV-träger",
+    "label": "Zuständiger Sozialversicherungsträger",
+    "filled_by": "lotse",
+    "hint": "Zum Beispiel „ÖGK – Österreichische Gesundheitskasse“."
+  },
+  "applicant.svnr": {
+    "field": "VSNR_1",
+    "label": "Versicherungsnummer (Patient*in)",
+    "filled_by": "lotse"
+  },
+  "applicant.last_name": {
+    "field": "Familienname",
+    "label": "Familienname (Patient*in)",
+    "filled_by": "lotse"
+  },
+  "applicant.first_name": {
+    "field": "Vorname",
+    "label": "Vorname (Patient*in)",
+    "filled_by": "lotse"
+  },
+  "applicant.year_of_birth": {
+    "field": "Geburtsjahr",
+    "label": "Geburtsjahr (Patient*in)",
+    "filled_by": "lotse"
+  },
+  "applicant.sex": {
+    "field": "Geschlecht",
+    "label": "Geschlecht (Patient*in)",
+    "filled_by": "lotse",
+    "options": {
+      "männlich": "/m",
+      "weiblich": "/w"
+    }
+  },
+  "applicant.full_name": {
+    "field": "Patient(in)",
+    "label": "Patient*in: Familienname Vorname",
+    "filled_by": "lotse",
+    "optional": true,
+    "copy_from": [
+      "applicant.last_name",
+      "applicant.first_name"
+    ],
+    "hint": "Entsteht aus Familienname und Vorname."
+  },
+  "applicant.address.full": {
+    "field": "Anschrift Patient(in)",
+    "label": "Anschrift (Patient*in)",
+    "filled_by": "lotse",
+    "hint": "Straße, Hausnummer, Postleitzahl, Ort."
+  },
+  "insured.full_name": {
+    "field": "Versicherte(r)",
+    "label": "Versicherte*r: Familienname Vorname",
+    "filled_by": "lotse",
+    "optional": true,
+    "hint": "Nur ausfüllen, wenn die Patientin oder der Patient mitversichert ist."
+  },
+  "insured.svnr": {
+    "field": "VSNR_2",
+    "label": "Versicherungsnummer (Versicherte*r)",
+    "filled_by": "lotse",
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "insured.employer": {
+    "field": "Versicherte(r) beschäftigt",
+    "label": "Versicherte*r beschäftigt bei (Dienstgeber*in, Dienstort, Telefon)",
+    "filled_by": "applicant",
+    "optional": true
+  },
+  "insured.marital_status": {
+    "field": "Personenstand",
+    "label": "Personenstand (Versicherte*r)",
+    "filled_by": "applicant"
+  },
+  "insured.phone": {
+    "field": "Telefonnummer",
+    "label": "Telefonnummer (Versicherte*r)",
+    "filled_by": "lotse"
+  },
+  "insured.address": {
+    "field": "Anschrift",
+    "label": "Anschrift (Versicherte*r)",
+    "filled_by": "lotse",
+    "hint": "Gleich wie bei der Patientin oder dem Patienten, wenn sie selbst versichert ist.",
+    "optional": true,
+    "copy_from": [
+      "applicant.address.full"
+    ]
+  },
+  "benefits.pension": {
+    "field": "Pensionsversicherung",
+    "label": "Leistungen aus der Pensionsversicherung",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.pension_insurer": {
+    "field": "Pensionsversicherungsträger",
+    "label": "Pensionsversicherungsträger",
+    "filled_by": "applicant",
+    "when": {
+      "key": "benefits.pension",
+      "value": "ja"
+    }
+  },
+  "benefits.unemployment": {
+    "field": "Arbeitslosenversicherung",
+    "label": "Leistungen aus der Arbeitslosenversicherung",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.ams_office": {
+    "field": "Geschäftsstelle AMS",
+    "label": "Geschäftsstelle des AMS",
+    "filled_by": "applicant",
+    "when": {
+      "key": "benefits.unemployment",
+      "value": "ja"
+    }
+  },
+  "benefits.accident": {
+    "field": "Unfallversicherung",
+    "label": "Leistungen aus der Unfallversicherung",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.accident_insurer": {
+    "field": "Unfallversicherungsanstalt",
+    "label": "Unfallversicherung: Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "benefits.accident",
+      "value": "ja"
+    }
+  },
+  "benefits.federal_office": {
+    "field": "Bundesamt",
+    "label": "Leistungen vom Bundesamt für Soziales und Behindertenwesen",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.social_assistance": {
+    "field": "Sozialhilfeträger",
+    "label": "Leistungen von einem Sozialhilfeträger",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.civil_service": {
+    "field": "öffentlich-rechtl. DVH",
+    "label": "Leistungen aus einem öffentlich-rechtlichen Dienstverhältnis (Ruhebezug)",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "benefits.civil_service_payer": {
+    "field": "Von welcher Stelle",
+    "label": "Öffentlich-rechtliches Dienstverhältnis: von welcher Stelle",
+    "filled_by": "applicant",
+    "when": {
+      "key": "benefits.civil_service",
+      "value": "ja"
+    }
+  },
+  "pension_application.any": {
+    "field": "Pensionsantrag",
+    "label": "Pensions- bzw. Rentenantrag gestellt",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "pension_application.institution": {
+    "field": "Bei welcher Anstalt1",
+    "label": "Pensionsantrag: bei welcher Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "pension_application.any",
+      "value": "ja"
+    }
+  },
+  "voluntary_insurance.any": {
+    "field": "freiwillig versichert",
+    "label": "In der Pensionsversicherung freiwillig versichert",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "voluntary_insurance.institution": {
+    "field": "Bei welcher Anstalt2",
+    "label": "Freiwillige Versicherung: bei welcher Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "voluntary_insurance.any",
+      "value": "ja"
+    }
+  },
+  "care_allowance.any": {
+    "field": "Pflegegeld",
+    "label": "Bezug von Pflegegeld",
+    "filled_by": "lotse",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "care_allowance.payer": {
+    "field": "Von welcher Anstalt",
+    "label": "Pflegegeld: von welcher Anstalt",
+    "filled_by": "lotse",
+    "when": {
+      "key": "care_allowance.any",
+      "value": "ja"
+    }
+  },
+  "care_allowance.level": {
+    "field": "Stufe1",
+    "label": "Pflegegeld: Stufe",
+    "filled_by": "lotse",
+    "when": {
+      "key": "care_allowance.any",
+      "value": "ja"
+    }
+  },
+  "relative.relationship": {
+    "field": "Verwandschaftsverhältnis",
+    "label": "Verwandtschaftsverhältnis zur*zum Versicherten",
+    "filled_by": "lotse",
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.employed_until": {
+    "field": "zuletzt beschäftigt bis",
+    "label": "Angehörige*r zuletzt beschäftigt bis",
+    "filled_by": "applicant",
+    "optional": true,
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.pension.any": {
+    "field": "Pensionsbezug",
+    "label": "Angehörige*r bezieht eine Pension",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    },
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.pension.payer": {
+    "field": "Von welcher Anstalt2",
+    "label": "Pension der*des Angehörigen: von welcher Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "relative.pension.any",
+      "value": "ja"
+    }
+  },
+  "relative.voluntary_insurance.any": {
+    "field": "freiwillig versichert1",
+    "label": "Angehörige*r freiwillig pensionsversichert",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    },
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.voluntary_insurance.institution": {
+    "field": "Bei welcher Anstalt3",
+    "label": "Freiwillige Versicherung der*des Angehörigen: bei welcher Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "relative.voluntary_insurance.any",
+      "value": "ja"
+    }
+  },
+  "relative.insured.any": {
+    "field": "pensions- unfallversichert",
+    "label": "Angehörige*r pensions- oder unfallversichert",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    },
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.insured.institution": {
+    "field": "Bei welcher Anstalt4",
+    "label": "Versicherung der*des Angehörigen: bei welcher Anstalt",
+    "filled_by": "applicant",
+    "when": {
+      "key": "relative.insured.any",
+      "value": "ja"
+    }
+  },
+  "relative.care_allowance.any": {
+    "field": "Pflegegeld1",
+    "label": "Angehörige*r bezieht Pflegegeld",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    },
+    "when": {
+      "key": "insured.full_name"
+    }
+  },
+  "relative.care_allowance.payer": {
+    "field": "Von welcher Stelle2",
+    "label": "Pflegegeld der*des Angehörigen: von welcher Stelle",
+    "filled_by": "applicant",
+    "when": {
+      "key": "relative.care_allowance.any",
+      "value": "ja"
+    }
+  },
+  "relative.care_allowance.level": {
+    "field": "Stufe2",
+    "label": "Pflegegeld der*des Angehörigen: Stufe",
+    "filled_by": "applicant",
+    "when": {
+      "key": "relative.care_allowance.any",
+      "value": "ja"
+    }
+  },
+  "previous_stays.any": {
+    "field": "Aufenthalt innerhalb von  Jahren",
+    "label": "Reha-, Kur-, Land- oder Erholungsaufenthalt in den letzten fünf Jahren",
+    "filled_by": "applicant",
+    "options": {
+      "nein": "/n",
+      "ja": "/j"
+    }
+  },
+  "previous_stays.first.when": {
+    "field": "Wann1",
+    "label": "Früherer Aufenthalt: wann",
+    "filled_by": "applicant",
+    "when": {
+      "key": "previous_stays.any",
+      "value": "ja"
+    }
+  },
+  "previous_stays.first.where": {
+    "field": "Wo1",
+    "label": "Früherer Aufenthalt: wo",
+    "filled_by": "applicant",
+    "when": {
+      "key": "previous_stays.any",
+      "value": "ja"
+    }
+  },
+  "previous_stays.second.when": {
+    "field": "Wann2",
+    "label": "Weiterer früherer Aufenthalt: wann",
+    "filled_by": "applicant",
+    "optional": true
+  },
+  "previous_stays.second.where": {
+    "field": "Wo2",
+    "label": "Weiterer früherer Aufenthalt: wo",
+    "filled_by": "applicant",
+    "optional": true
+  },
+  "application.date": {
+    "field": "Datum",
+    "label": "Datum (bei der Unterschrift)",
+    "filled_by": "applicant",
+    "hint": "Die Patientin oder der Patient unterschreibt selbst."
+  },
+  "doctor.history": {
+    "field": "Aktuelle Vorgeschichte",
+    "label": "Aktuelle Vorgeschichte (Beginn, Unfall, Vorbehandlung, Spitalsaufenthalte)",
+    "filled_by": "doctor",
+    "hint": "Die Ärztin oder der Arzt füllt die ärztliche Stellungnahme auf Seite 2 aus."
+  },
+  "doctor.diagnosis": {
+    "field": "Antragsrelevante Diagnose",
+    "label": "Antragsrelevante Diagnose",
+    "filled_by": "doctor"
+  },
+  "doctor.measurements": {
+    "field": "Größe",
+    "label": "Größe, Gewicht und Blutdruck",
+    "filled_by": "doctor"
+  },
+  "doctor.findings": {
+    "field": "Befunde",
+    "label": "Maßgebliche Befunde und Funktionseinschränkungen",
+    "filled_by": "doctor"
+  },
+  "doctor.notes": {
+    "field": "andere wichtige Hinweise",
+    "label": "Andere wichtige Hinweise zur Kur- bzw. Heimfähigkeit",
+    "filled_by": "doctor"
+  },
+  "doctor.proposed_measure": {
+    "field": "Rehabilitation",
+    "label": "Vorgeschlagene Maßnahme (stationäre oder ambulante Reha, Kur, Erholung, Genesung, Landaufenthalt)",
+    "filled_by": "doctor"
+  },
+  "doctor.proposed_field": {
+    "field": "Onkologie",
+    "label": "Fachrichtung der Maßnahme (z. B. Onkologie, Herz-Kreislauf, Bewegungsapparat)",
+    "filled_by": "doctor"
+  },
+  "doctor.proposed_place": {
+    "field": "Ort",
+    "label": "Vorgeschlagener Ort",
+    "filled_by": "doctor"
+  },
+  "doctor.justification": {
+    "field": "Begründung",
+    "label": "Begründung für die vorgeschlagene Maßnahme",
+    "filled_by": "doctor"
+  },
+  "doctor.fitness": {
+    "field": "heimfähig",
+    "label": "Heim-, Kur- und Gehfähigkeit, Diät, Hilfsmittel",
+    "filled_by": "doctor"
+  },
+  "doctor.assistance": {
+    "field": "Begleitperson",
+    "label": "Begleitperson, fremde Hilfe und Transport",
+    "filled_by": "doctor"
+  },
+  "doctor.signature_date": {
+    "field": "Datum1",
+    "label": "Datum, Unterschrift und Stempel der Ärztin oder des Arztes",
+    "filled_by": "doctor"
+  }
+}

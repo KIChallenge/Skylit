@@ -1,0 +1,436 @@
+{
+  "application.type": {
+    "field": "Antrag Pflg",
+    "label": "Antrag auf Pflegegeld: Zuerkennung / Erhöhung / Weitergewährung",
+    "filled_by": "lotse",
+    "options": { "Zuerkennung": "/01", "Erhöhung": "/02", "Weitergewährung nach Befristung": "/03" }
+  },
+  "applicant.svnr": {
+    "field": "VSNR_1",
+    "label": "Versicherungsnummer",
+    "filled_by": "lotse"
+  },
+  "applicant.last_name": {
+    "field": "Fam.Name",
+    "label": "Familienname",
+    "filled_by": "lotse"
+  },
+  "applicant.first_name": {
+    "field": "Vorname",
+    "label": "Vorname",
+    "filled_by": "lotse"
+  },
+  "applicant.title": {
+    "field": "Titel",
+    "label": "Titel",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "applicant.former_names": {
+    "field": "frühere Namen",
+    "label": "Frühere Namen",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "applicant.date_of_birth": {
+    "field": "Geburtsdatum",
+    "label": "Geburtsdatum",
+    "filled_by": "lotse"
+  },
+  "applicant.sex": {
+    "field": "Geschlecht",
+    "label": "Geschlecht",
+    "filled_by": "lotse"
+  },
+  "applicant.citizenship": {
+    "field": "Stabü",
+    "label": "Staatsbürgerschaft",
+    "filled_by": "lotse",
+    "options": { "Österreich": "/01", "andere": "/02" }
+  },
+  "applicant.citizenship_other": {
+    "field": "andere Staatsbürgerschaft",
+    "label": "Staatsbürgerschaft: andere",
+    "filled_by": "lotse",
+    "hint": "Nachweis über die Aufenthaltsberechtigung beilegen.",
+    "when": { "key": "applicant.citizenship", "value": "andere" }
+  },
+  "applicant.marital_status": {
+    "field": "Personenstand",
+    "label": "Personenstand",
+    "filled_by": "lotse",
+    "options": {
+      "ledig": "/01",
+      "verheiratet": "/02",
+      "verwitwet": "/03",
+      "geschieden": "/04",
+      "eingetragene Partnerschaft": "/05",
+      "ehemalige eingetragene Partnerschaft": "/08"
+    }
+  },
+  "applicant.marital_status_since": {
+    "field": "Personenstand seit",
+    "label": "Personenstand seit",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "applicant.address.street": {
+    "field": "Adresse Straße",
+    "label": "Straße / Gasse / Platz",
+    "filled_by": "lotse"
+  },
+  "applicant.address.house_number": {
+    "field": "Hausnummer, Stiege, Tür",
+    "label": "Hausnr. / Stiege / Tür",
+    "filled_by": "lotse"
+  },
+  "applicant.address.zip": {
+    "field": "PLZ",
+    "label": "Postleitzahl",
+    "filled_by": "lotse"
+  },
+  "applicant.address.city": {
+    "field": "Ort",
+    "label": "Ort",
+    "filled_by": "lotse"
+  },
+  "applicant.address.country": {
+    "field": "Land",
+    "label": "Land",
+    "filled_by": "lotse"
+  },
+  "applicant.temporary_address": {
+    "field": "voruebergehend",
+    "label": "Vorübergehender Aufenthaltsort",
+    "filled_by": "lotse",
+    "hint": "z.B. Heim, Krankenhaus, bei Familienangehörigen. Genaue Adresse angeben.",
+    "optional": true
+  },
+  "applicant.phone": {
+    "field": "Telefon",
+    "label": "Telefonnummer (mit Vorwahl)",
+    "filled_by": "lotse"
+  },
+  "applicant.email": {
+    "field": "Email",
+    "label": "E-Mail",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "representative.role": {
+    "field": "Andere Person",
+    "label": "Antragstellung durch andere Person: Ich bin …",
+    "filled_by": "applicant",
+    "hint": "Nur ankreuzen, wenn eine gesetzliche Vertretung oder eine Vollmacht besteht.",
+    "options": { "gesetzliche Vertretung": "/01", "bevollmächtigt": "/02", "andere": "/03" },
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.proof": {
+    "field": "Nachweis",
+    "label": "Nachweis der Vertretung",
+    "filled_by": "applicant",
+    "options": { "liegt bei": "/01", "wird nachgereicht": "/02" },
+    "when": { "key": "representative.role" }
+  },
+  "representative.last_name": {
+    "field": "Familienname andere",
+    "label": "Familienname (andere Person)",
+    "filled_by": "lotse",
+    "hint": "Nur ausfüllen, wenn eine andere Person den Antrag stellt.",
+    "optional": true
+  },
+  "representative.first_name": {
+    "field": "Vorname andere Person",
+    "label": "Vorname (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.title": {
+    "field": "Titel2",
+    "label": "Titel (andere Person)",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "representative.address.street": {
+    "field": "Adresse Straße 1",
+    "label": "Straße / Gasse / Platz (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.address.house_number": {
+    "field": "Hausnummer, Stiege, Tür2",
+    "label": "Hausnr. / Stiege / Tür (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.address.zip": {
+    "field": "PLZ 1",
+    "label": "Postleitzahl (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.address.city": {
+    "field": "Ort 1",
+    "label": "Ort (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.address.country": {
+    "field": "Land2",
+    "label": "Land (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.phone": {
+    "field": "Telefon 1",
+    "label": "Telefonnummer (andere Person)",
+    "filled_by": "lotse",
+    "when": { "key": "representative.last_name" }
+  },
+  "representative.email": {
+    "field": "Email2",
+    "label": "E-Mail (andere Person)",
+    "filled_by": "lotse",
+    "optional": true
+  },
+  "health.conditions": {
+    "field": "Leiden",
+    "label": "Krankheiten bzw. gesundheitliche Beeinträchtigungen",
+    "filled_by": "doctor",
+    "hint": "Aus den ärztlichen Befunden übernehmen. Der Lotse trägt keine medizinischen Angaben ein."
+  },
+  "health.reason.physical": {
+    "field": "körperl. Einschränkung",
+    "label": "Gründe der Pflegebedürftigkeit: körperliche Einschränkung",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.reason.wheelchair": {
+    "field": "Rollstuhlfahrer",
+    "label": "Gründe der Pflegebedürftigkeit: Rollstuhlfahrer*in",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.reason.visual": {
+    "field": "Sehbehinderung",
+    "label": "Gründe der Pflegebedürftigkeit: Sehbehinderung / Blindheit",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.reason.intellectual": {
+    "field": "geistige Beeinträchtigung",
+    "label": "Gründe der Pflegebedürftigkeit: geistige Beeinträchtigung",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.reason.dementia": {
+    "field": "Demenz",
+    "label": "Gründe der Pflegebedürftigkeit: Gedächtnisstörung / Demenz",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.reason.mental": {
+    "field": "psychische Erkrankung",
+    "label": "Gründe der Pflegebedürftigkeit: psychische Erkrankung",
+    "filled_by": "doctor",
+    "hint": "Mit den ärztlichen Befunden abgleichen.",
+    "options": { "ja": "/01", "nein": "/02" }
+  },
+  "health.takes_medication": {
+    "field": "regelm. Medikamente",
+    "label": "Nehmen Sie regelmäßig Medikamente?",
+    "filled_by": "doctor",
+    "hint": "Laut aktuellem Medikationsplan der Ärztin oder des Arztes ausfüllen.",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "health.medication": {
+    "field": "Medikamente",
+    "label": "Medikamente: ja, welche",
+    "filled_by": "doctor",
+    "hint": "Laut aktuellem Medikationsplan der Ärztin oder des Arztes ausfüllen."
+  },
+  "home_visit.notify_other_person": {
+    "field": "Hausbesuch",
+    "label": "Sollen weitere Personen vom Termin des Hausbesuchs informiert werden?",
+    "filled_by": "applicant",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "contact_person.name": {
+    "field": "Name weitere Person",
+    "label": "Weitere Person für den Hausbesuch: Familienname, Vorname",
+    "filled_by": "lotse",
+    "when": { "key": "home_visit.notify_other_person", "value": "ja" }
+  },
+  "contact_person.contact_details": {
+    "field": "Adresse weitere Person",
+    "label": "Weitere Person für den Hausbesuch: Adresse, Telefonnummer, E-Mail",
+    "filled_by": "lotse",
+    "when": { "key": "home_visit.notify_other_person", "value": "ja" }
+  },
+  "care.by_other": {
+    "field": "Betreuung durch andere Person",
+    "label": "Erfolgt die notwendige Betreuung und Hilfe von einer anderen Person / Stelle?",
+    "filled_by": "lotse",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "care.caregiver": {
+    "field": "Person Stelle Pflegeperson",
+    "label": "Pflegeperson(en)",
+    "filled_by": "lotse",
+    "options": { "ja": "/ja", "nein": "/Off" },
+    "optional": true
+  },
+  "care.caregiver_name_address": {
+    "field": "Name und Adresse Pflegeperson",
+    "label": "Pflegeperson(en): Name(n) und Adresse(n)",
+    "filled_by": "lotse",
+    "when": { "key": "care.caregiver", "value": "ja" }
+  },
+  "care.full_time": {
+    "field": "24 Stunden Betreuuung",
+    "label": "Besteht eine 24-Stunden-Betreuung?",
+    "filled_by": "lotse",
+    "options": { "nein": "/01", "ja": "/02" },
+    "when": { "key": "care.by_other", "value": "ja" }
+  },
+  "care.mobile_services": {
+    "field": "mobile Dienste",
+    "label": "Mobile Dienste (z.B. mobile Hilfe und Betreuung, Hauskrankenpflege, Essen auf Rädern)",
+    "filled_by": "lotse",
+    "options": { "ja": "/ja", "nein": "/Off" },
+    "optional": true
+  },
+  "care.mobile_services_details": {
+    "field": "Name mobiler Dienst",
+    "label": "Mobile Dienste: Dienste, Kostenträger",
+    "filled_by": "lotse",
+    "when": { "key": "care.mobile_services", "value": "ja" }
+  },
+  "care.day_care": {
+    "field": "Person Stelle ambulant teilstationär",
+    "label": "Ambulante / teilstationäre Dienste",
+    "filled_by": "lotse",
+    "options": { "ja": "/ja", "nein": "/Off" },
+    "optional": true
+  },
+  "care.day_care_details": {
+    "field": "ambulante teilstationäre Einrichtung, Kostenträger",
+    "label": "Ambulante / teilstationäre Dienste: Einrichtung sowie Adresse, Kostenträger",
+    "filled_by": "lotse",
+    "when": { "key": "care.day_care", "value": "ja" }
+  },
+  "living.situation": {
+    "field": "Wohnsituation",
+    "label": "Dauernde Unterbringung in stationärer Einrichtung / betreutes Wohnen",
+    "filled_by": "lotse",
+    "hint": "Leer lassen, wenn die Person zu Hause wohnt.",
+    "options": { "dauernde Unterbringung": "/01", "betreutes Wohnen": "/02" },
+    "optional": true
+  },
+  "living.facility_details": {
+    "field": "dauernde Einrichtung, Kostenträger",
+    "label": "Stationäre Einrichtung: Einrichtung sowie Adresse, Kostenträger",
+    "filled_by": "lotse",
+    "when": { "key": "living.situation" }
+  },
+  "hospital_stay.any": {
+    "field": "Krankenhaus",
+    "label": "Waren Sie innerhalb der letzten Monate in einer Krankenanstalt?",
+    "filled_by": "lotse",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "hospital_stay.from": {
+    "field": "KH von",
+    "label": "Aufenthaltsdauer von",
+    "filled_by": "lotse",
+    "when": { "key": "hospital_stay.any", "value": "ja" }
+  },
+  "hospital_stay.to": {
+    "field": "KH bis",
+    "label": "Aufenthaltsdauer bis",
+    "filled_by": "lotse",
+    "when": { "key": "hospital_stay.any", "value": "ja" }
+  },
+  "hospital_stay.institution": {
+    "field": "Spital",
+    "label": "Krankenanstalt / Einrichtung",
+    "filled_by": "lotse",
+    "when": { "key": "hospital_stay.any", "value": "ja" }
+  },
+  "accident.any": {
+    "field": "Unfall",
+    "label": "Sind Sie durch einen Unfall pflegebedürftig geworden?",
+    "filled_by": "applicant",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "similar_benefit.any": {
+    "field": "andere Leistung",
+    "label": "Haben Sie Anspruch auf eine dem Pflegegeld ähnliche inländische oder ausländische Leistung?",
+    "filled_by": "applicant",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "pension.any": {
+    "field": "ausländische Pension",
+    "label": "Haben Sie Anspruch auf inländische oder ausländische Pensionsleistungen?",
+    "filled_by": "applicant",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "pension.type": {
+    "field": "Art der ausl. Leistung",
+    "label": "Pensionsleistung: Art der Leistung",
+    "filled_by": "applicant",
+    "when": { "key": "pension.any", "value": "ja" }
+  },
+  "pension.since": {
+    "field": "Art der Leistung seit2",
+    "label": "Pensionsleistung: seit",
+    "filled_by": "applicant",
+    "when": { "key": "pension.any", "value": "ja" }
+  },
+  "pension.payer": {
+    "field": "ausl. Leistung Stelle",
+    "label": "Pensionsleistung: Auszahlende Stelle und Aktenzeichen",
+    "filled_by": "applicant",
+    "when": { "key": "pension.any", "value": "ja" }
+  },
+  "care_counselling.wanted": {
+    "field": "Pflegeberatung",
+    "label": "Wünschen Sie eine kostenlose Pflegeberatung zu Hause?",
+    "filled_by": "applicant",
+    "hint": "„Ja“ heißt: Zustimmung zur Weitergabe von Name, Sozialversicherungsnummer, Anschrift und Telefonnummer.",
+    "options": { "nein": "/01", "ja": "/02" }
+  },
+  "care_counselling.consent_by_family": {
+    "field": "Antragstellung andere Person",
+    "label": "Zustimmung der pflegebedürftigen Person zur Weitergabe der Daten eingeholt",
+    "filled_by": "applicant",
+    "hint": "Nur bei Antragstellung durch ein Familienmitglied oder eine Person aus dem Haushalt.",
+    "options": { "ja": "/01", "nein": "/Off" },
+    "when": { "key": "representative.last_name" }
+  },
+  "payment.method": {
+    "field": "Anweisung",
+    "label": "Anweisung des Pflegegeldes (kein Leistungsbezug)",
+    "filled_by": "applicant",
+    "hint": "Nur ausfüllen, wenn noch keine Leistung bezogen wird.",
+    "options": { "Konto": "/01", "Barzahlung": "/02" },
+    "optional": true
+  },
+  "application.date": {
+    "field": "Datum_1",
+    "label": "Datum",
+    "filled_by": "applicant",
+    "hint": "Am Tag der Unterschrift eintragen und den Antrag unterschreiben."
+  },
+  "application.attachments": {
+    "field": "Unterlagen",
+    "label": "Folgende Unterlagen liegen bei",
+    "filled_by": "lotse",
+    "optional": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "applicant.full_name": {"field": "Patient/in", "label": "Patient/in: Familienname, Vorname", "filled_by": "lotse"},
+  "applicant.svnr": {"field": "Versicherungsnummer1", "label": "Patient/in: Versicherungsnummer", "filled_by": "lotse", "hint": "10 Ziffern ohne Leerzeichen."},
+  "applicant.address.full": {"field": "Adresse", "label": "Adresse (Straße, Postleitzahl, Ort)", "filled_by": "lotse"},
+  "insured.full_name": {"field": "Versicherte/r", "label": "Versicherte/r: Familienname, Vorname", "filled_by": "lotse", "hint": "Nur ausfüllen, wenn die Patientin oder der Patient bei einer anderen Person mitversichert ist.", "optional": true},
+  "insured.svnr": {"field": "Versicherungsnummer2", "label": "Versicherte/r: Versicherungsnummer", "filled_by": "lotse", "hint": "10 Ziffern ohne Leerzeichen.", "when": {"key": "insured.full_name"}},
+  "treatment.provider": {"field": "Behandler/in", "label": "Bei wem fand die Behandlung statt? (Name, Adresse)", "filled_by": "lotse", "hint": "Die Einrichtung bestätigt jede Fahrt mit Datum, Stempel und Unterschrift auf Seite 1."},
+  "treatment.type": {"field": "Art der Behandlung", "label": "Art der Behandlung bzw. Reha-Maßnahme", "filled_by": "lotse", "hint": "Nur übernehmen, was die Person oder ein Dokument ausdrücklich nennt. Vorhandene Unterlagen in Kopie beilegen."},
+  "transport.mode": {"field": "Transportmittel", "label": "Welches Transportmittel haben Sie genommen?", "filled_by": "applicant", "options": {"Öffentliches Verkehrsmittel": "/Auswahl1", "Taxi": "/Auswahl2", "Privater PKW": "/Auswahl3"}},
+  "transport.actual_costs": {"field": "Tatsächliche Kosten", "label": "Tatsächliche Kosten in Euro", "filled_by": "applicant", "hint": "Vorhandene Belege in Kopie beilegen."},
+  "companion.any": {"field": "Begleitperson", "label": "Begleitperson", "filled_by": "applicant", "options": {"ja": "/Auswahl1", "nein": "/Auswahl2"}},
+  "companion.reason": {"field": "Grund", "label": "Warum wurden Sie begleitet?", "filled_by": "applicant", "when": {"key": "companion.any", "value": "ja"}},
+  "payment.iban": {"field": "IBAN", "label": "IBAN für die Überweisung des Zuschusses", "filled_by": "applicant", "hint": "Tragen Sie die IBAN selbst im PDF ein."},
+  "application.place_date": {"field": "Ort/Datum", "label": "Ort/Datum", "filled_by": "applicant", "hint": "Am Tag der Unterschrift eintragen und den Antrag unterschreiben."}
+}

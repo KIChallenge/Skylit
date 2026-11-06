@@ -1,0 +1,261 @@
+{
+  "request_sha256": "0350f8559fd28741804f7a3e0e0165b5f553d2ea03a69834c50a47872f8cf6fb",
+  "model": "eustella-v1.5",
+  "chunks": [
+    {
+      "type": "text",
+      "text": "Ich",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " f",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": "ülle den Antrag",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " mit den",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " Angaben",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " aus dem Brief",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " und dem Profil",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": " voraus",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "text",
+      "text": ".\n\n",
+      "tool_call": null,
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": "chatcmpl-tool-a12330c68f9a90ca",
+        "name": "prepare_form",
+        "arguments": ""
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"form_id\": \"p"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "va_pflege"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "geld"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "\", \"values\": "
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "tool_call",
+      "text": null,
+      "tool_call": {
+        "index": 0,
+        "id": null,
+        "name": null,
+        "arguments": "{\"applicant.last_name\": \"Berger\", \"applicant.first_name\": \"Anna\", \"applicant.date_of_birth\": \"14.03.1948\", \"applicant.sex\": \"weiblich\", \"applicant.citizenship\": \"Österreich\", \"applicant.marital_status\": \"alleinstehend\", \"applicant.address.full\": \"Musterstraße 12, 1030 Wien\", \"insurer.name\": \"Österreichische Gesellschaft für Krankenversicherung (ÖGK)\"}}"
+      },
+      "usage": null,
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "usage",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 13081,
+        "completion_tokens": 164,
+        "cached_tokens": 6336
+      },
+      "finish_reason": null,
+      "tool_calls": [],
+      "model": null,
+      "request_id": null,
+      "rate_limit": {}
+    },
+    {
+      "type": "finish",
+      "text": null,
+      "tool_call": null,
+      "usage": {
+        "prompt_tokens": 13081,
+        "completion_tokens": 164,
+        "cached_tokens": 6336
+      },
+      "finish_reason": "tool_calls",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a12330c68f9a90ca",
+          "name": "prepare_form",
+          "arguments": {
+            "form_id": "pva_pflegegeld",
+            "values": {
+              "applicant.last_name": "Berger",
+              "applicant.first_name": "Anna",
+              "applicant.date_of_birth": "14.03.1948",
+              "applicant.sex": "weiblich",
+              "applicant.citizenship": "Österreich",
+              "applicant.marital_status": "alleinstehend",
+              "applicant.address.full": "Musterstraße 12, 1030 Wien",
+              "insurer.name": "Österreichische Gesellschaft für Krankenversicherung (ÖGK)"
+            }
+          },
+          "raw_arguments": "{\"form_id\": \"pva_pflegegeld\", \"values\": {\"applicant.last_name\": \"Berger\", \"applicant.first_name\": \"Anna\", \"applicant.date_of_birth\": \"14.03.1948\", \"applicant.sex\": \"weiblich\", \"applicant.citizenship\": \"Österreich\", \"applicant.marital_status\": \"alleinstehend\", \"applicant.address.full\": \"Musterstraße 12, 1030 Wien\", \"insurer.name\": \"Österreichische Gesellschaft für Krankenversicherung (ÖGK)\"}}",
+          "parse_error": null
+        }
+      ],
+      "model": "eustella-v1.5",
+      "request_id": "req_5df71da87aea98b5048610a5",
+      "rate_limit": {
+        "x-ratelimit-limit-output-tokens": "15360",
+        "x-ratelimit-limit-requests": "20",
+        "x-ratelimit-limit-tokens": "96000",
+        "x-ratelimit-remaining-output-tokens": "15170",
+        "x-ratelimit-remaining-requests": "18",
+        "x-ratelimit-remaining-tokens": "66115",
+        "x-ratelimit-reset-output-tokens": "1s",
+        "x-ratelimit-reset-requests": "4s",
+        "x-ratelimit-reset-tokens": "19s"
+      }
+    }
+  ]
+}

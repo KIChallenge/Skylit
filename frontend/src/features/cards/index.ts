@@ -1,0 +1,2 @@
+export { ResultCards, ResultCard, ResultCardFrame, DocumentSummaryCard, QuoteBlock, LeistungCard, FormDraftCard, OfficeCard, EscalationCard, CopyButton } from "./result-cards";
+export type { ResultCardsProps, ResultCardProps, ResultCardFrameProps, DocumentSummaryCardProps, QuoteBlockProps, LeistungCardProps, FormDraftCardProps, OfficeCardProps, EscalationCardProps, CopyButtonProps } from "./result-cards";
